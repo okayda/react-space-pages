@@ -25,6 +25,24 @@ img {
   object-fit: cover;
 }
 
+button {
+  background: transparent;
+  border: none;
+  line-height: 0;
+}
+
 p {
   line-height: 1.5;
+}
+
+.container {
+  max-width: 375px;
+  margin: 0 auto;
+  padding: 0 2.25rem;
+  height: 100vh;
+}
+
+#main-header {
+  padding: 2.4rem 0;
+  margin-bottom: 6.4rem;
 }

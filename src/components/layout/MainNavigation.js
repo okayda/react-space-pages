@@ -1,19 +1,21 @@
+import classes from "./MainNavigation.module.scss";
+
 import Logo from "../../assets/shared/logo.svg";
 import burgerIcon from "../../assets/shared/icon-hamburger.svg";
 
 const MainNavigation = function () {
   return (
-    <header>
-      <a href="#">
+    <div className={classes.header__wrapper}>
+      <a href="#" className={classes.header__logo}>
         <img src={Logo} alt="Logo" />
       </a>
 
       <nav>
-        <button>
+        <button className={classes.header__burger}>
           <img src={burgerIcon} alt="" />
         </button>
 
-        <ul>
+        <ul className={classes.header__list}>
           <li>
             <a href="#">
               <span>00</span> Home
@@ -39,7 +41,7 @@ const MainNavigation = function () {
           </li>
         </ul>
       </nav>
-    </header>
+    </div>
   );
 };
 

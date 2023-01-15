@@ -1,0 +1,53 @@
+@use "../../scss" as *;
+
+.home {
+  text-align: center;
+
+  &__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -10;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    margin-bottom: 8.1rem;
+
+    span {
+      font-size: 1.6rem;
+      text-transform: uppercase;
+      font-family: "Barlow Condensed", sans-serif;
+      letter-spacing: 2.7px;
+    }
+
+    h1 {
+      font-size: 8rem;
+      text-transform: uppercase;
+    }
+  }
+
+  &__explore {
+    position: relative;
+    display: inline-block;
+    background-color: $white;
+    width: 15rem;
+    height: 15rem;
+    border-radius: 100px;
+
+    &::before {
+      content: "explore";
+      text-transform: uppercase;
+      font-size: 2rem;
+      letter-spacing: 1.2px;
+      color: $dark;
+
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}

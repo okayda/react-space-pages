@@ -2,12 +2,13 @@ import Layout from "./components/layout/Layout";
 import "./scss/_global.scss";
 
 import Home from "./pages/Home";
-
+import Destination from "./pages/Destination";
 function App() {
   return (
     <section>
       <Layout>
-        <Home />
+        {/* <Home /> */}
+        <Destination />
       </Layout>
     </section>
   );

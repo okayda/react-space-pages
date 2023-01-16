@@ -1,0 +1,105 @@
+@use "../../scss" as *;
+
+.destination {
+  text-align: center;
+
+  &__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -10;
+  }
+
+  &__content {
+    padding-bottom: 3.2rem;
+    border-bottom: 1px solid darken($white, 70%);
+  }
+
+  &__sub {
+    margin-bottom: 3.2rem;
+
+    span {
+      font-family: "Barlow Condensed", sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 2.7px;
+    }
+
+    &--num {
+      margin-right: 1.8rem;
+      font-weight: 700;
+      color: darken($white, 70%);
+    }
+
+    &--title {
+      font-weight: 400;
+      color: $white;
+    }
+  }
+
+  &__img {
+    width: 17rem;
+    height: 17rem;
+    margin-bottom: 2.6rem;
+  }
+
+  &__link-list {
+    display: flex;
+    justify-content: center;
+    gap: 2.7rem;
+    margin-bottom: 2rem;
+
+    a:link,
+    a:visited {
+      font-size: 1.4rem;
+      font-family: "Barlow Condensed", sans-serif;
+      text-transform: uppercase;
+      padding-bottom: 0.8rem;
+      letter-spacing: 2.3px;
+      color: $light-purple;
+    }
+
+    a.active,
+    a:hover,
+    a:active {
+      color: $white;
+      border-bottom: 3px solid $white;
+    }
+  }
+
+  h2 {
+    font-size: 5.6rem;
+    text-transform: uppercase;
+    font-family: "Bellefair", serif;
+    font-weight: 400;
+  }
+
+  &__information {
+    padding: 3.2rem 0;
+  }
+
+  &__list-travel {
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+
+    li {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+
+    span {
+      text-transform: uppercase;
+      font-size: 1.4rem;
+      letter-spacing: 2.3px;
+    }
+
+    h3 {
+      font-size: 2.8rem;
+      font-family: "Bellefair", serif;
+      font-weight: 400;
+      text-transform: uppercase;
+      color: $white;
+    }
+  }
+}

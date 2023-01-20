@@ -47,9 +47,16 @@ button {
   line-height: 0;
 }
 
-h1 {
+span {
+  text-transform: uppercase;
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+h1,
+h2 {
   font-family: "Bellefair", serif;
   font-weight: 400;
+  text-transform: uppercase;
 }
 
 p {

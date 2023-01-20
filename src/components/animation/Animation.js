@@ -44,12 +44,12 @@ export const linksAnimation = function (index) {
 
 export const contentAnimation = {
   hidden: {
-    x: "-100vw",
+    translateX: "-20vw",
     opacity: 0,
   },
 
   visible: {
-    x: 0,
+    translateX: 0,
     opacity: 1,
     transition: {
       duration: 0.35,
@@ -57,7 +57,7 @@ export const contentAnimation = {
   },
 
   exit: {
-    x: "100vw",
+    translateX: "20vw",
     opacity: 0,
     transition: {
       duration: 0.35,

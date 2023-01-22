@@ -1,5 +1,6 @@
 export const CrewData = [
   {
+    id: "p1",
     position: "commander",
     name: "doughlas hurley",
     information:
@@ -7,6 +8,7 @@ export const CrewData = [
   },
 
   {
+    id: "p2",
     position: "mission specialist",
     name: "mark shuttleworth",
     information:
@@ -14,6 +16,7 @@ export const CrewData = [
   },
 
   {
+    id: "p3",
     position: "pilot",
     name: "victor glover",
     information:
@@ -21,6 +24,7 @@ export const CrewData = [
   },
 
   {
+    id: "p4",
     position: "flight engineer",
     name: "anousheh ansari",
     information:

@@ -67,15 +67,33 @@ export const contentAnimation = {
 
 export const listAnimation = {
   hidden: {
-    y: "20vh",
     opacity: 0,
   },
 
   visible: {
-    y: 0,
     opacity: 1,
     transition: {
       duration: 0.55,
+    },
+  },
+};
+
+export const fadeAnimation = {
+  hidden: {
+    opacity: 0,
+  },
+
+  visible: {
+    opacity: 1,
+    transition: {
+      duration: 0.4,
+    },
+  },
+
+  exit: {
+    opacity: 0,
+    transition: {
+      duration: 0.2,
     },
   },
 };

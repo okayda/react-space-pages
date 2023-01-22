@@ -1,16 +1,17 @@
 import { useState } from "react";
+
 import classes from "./pagesStyles/Crew.module.scss";
 
-import "swiper/css";
-import "swiper/css/pagination";
-
 import background from "../assets/crew/background-crew-mobile.jpg";
-
 import CrewSwiper from "./crew/crewSwiper/CrewSwiper";
 import CrewDescription from "./crew/CrewDescription";
 
 const Crew = function () {
-  const [activeContent, setActiveContent] = useState(0);
+  const [content, setContent] = useState(0);
+
+  const updateContent = function (index) {
+    setContent(index);
+  };
 
   return (
     <div className={classes.crew}>
@@ -26,9 +27,9 @@ const Crew = function () {
           <span className={classes["crew__sub--title"]}>meet your crew</span>
         </div>
 
-        <CrewSwiper setActiveContent={setActiveContent} />
+        <CrewSwiper updateContent={updateContent} />
 
-        <CrewDescription classes={classes} currentContent={activeContent} />
+        <CrewDescription classes={classes} currentContent={content} />
       </div>
     </div>
   );

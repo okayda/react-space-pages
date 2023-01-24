@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import classes from "./pagesStyles/Crew.module.scss";
+import classes from "./styles/Crew.module.scss";
 
 import background from "../assets/crew/background-crew-mobile.jpg";
 import CrewSwiper from "./crew/crewSwiper/CrewSwiper";

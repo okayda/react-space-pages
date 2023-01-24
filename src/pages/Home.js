@@ -1,4 +1,4 @@
-import classes from "./pagesStyles/Home.module.scss";
+import classes from "./styles/Home.module.scss";
 import background from "../assets/home/background-home-mobile.jpg";
 
 const Home = function () {

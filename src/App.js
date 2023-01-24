@@ -4,6 +4,7 @@ import "./scss/_global.scss";
 import Home from "./pages/Home";
 import Destination from "./pages/Destination";
 import Crew from "./pages/Crew";
+import Technology from "./pages/Technology";
 
 function App() {
   return (
@@ -11,7 +12,8 @@ function App() {
       <Layout>
         {/* <Home /> */}
         {/* <Destination /> */}
-        {<Crew />}
+        {/* {<Crew />} */}
+        {<Technology />}
       </Layout>
     </section>
   );

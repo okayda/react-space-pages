@@ -1,7 +1,5 @@
-import classes from "./pagesStyles/Destination.module.scss";
-import { motion } from "framer-motion";
+import classes from "./styles/Destination.module.scss";
 import background from "../assets/destination/background-destination-mobile.jpg";
-import imgMoon from "../assets/destination/image-moon.webp";
 
 import DestinationList from "./destination/DestinationList";
 

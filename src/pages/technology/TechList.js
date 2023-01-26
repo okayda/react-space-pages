@@ -4,19 +4,19 @@ const TechList = function ({ active }) {
   return (
     <>
       <li>
-        <NavLink to="/launch" activeClassName={active}>
+        <NavLink to="/technology/launch" activeClassName={active}>
           1
         </NavLink>
       </li>
 
       <li>
-        <NavLink to="/spaceport" activeClassName={active}>
+        <NavLink to="/technology/spaceport" activeClassName={active}>
           2
         </NavLink>
       </li>
 
       <li>
-        <NavLink to="/spacecapsule" activeClassName={active}>
+        <NavLink to="/technology/spacecapsule" activeClassName={active}>
           3
         </NavLink>
       </li>

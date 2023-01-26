@@ -14,15 +14,15 @@ const TechImageRoute = function () {
     <>
       <AnimatePresence mode="wait" initial={true}>
         <Switch location={location} key={location.pathname}>
-          <Route path="/launch">
+          <Route path="/technology/launch">
             <ImgFade src={img1} alt="Launch Vehicle" />
           </Route>
 
-          <Route path="/spaceport">
+          <Route path="/technology/spaceport">
             <ImgFade src={img2} alt="Spaceport" />
           </Route>
 
-          <Route path="/spacecapsule">
+          <Route path="/technology/spacecapsule">
             <ImgFade src={img3} alt="Space Capsule" />
           </Route>
         </Switch>

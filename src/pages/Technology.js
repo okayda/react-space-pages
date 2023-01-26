@@ -14,13 +14,16 @@ const Technology = function () {
         </span>
       </div>
 
-      <TechImageRoute classes={classes} />
+      <div className={classes.technology__images}>
+        <TechImageRoute />
+      </div>
 
-      <TechList classes={classes} />
+      <ul className={classes.technology__list}>
+        <TechList active={classes.active} />
+      </ul>
 
       <div className={classes.technology__content}>
         <span>the terminology</span>
-
         <TechDescripRoute />
       </div>
     </div>

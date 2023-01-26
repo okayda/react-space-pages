@@ -1,22 +1,26 @@
 import { NavLink } from "react-router-dom";
 
-const TechList = function ({ classes }) {
+const TechList = function ({ active }) {
   return (
-    <ul className={classes.technology__list}>
+    <>
       <li>
-        <NavLink to="/launch">1</NavLink>
+        <NavLink to="/launch" activeClassName={active}>
+          1
+        </NavLink>
       </li>
 
       <li>
-        <NavLink to="/spaceport" className={classes.active}>
+        <NavLink to="/spaceport" activeClassName={active}>
           2
         </NavLink>
       </li>
 
       <li>
-        <NavLink to="/spacecapsule">3</NavLink>
+        <NavLink to="/spacecapsule" activeClassName={active}>
+          3
+        </NavLink>
       </li>
-    </ul>
+    </>
   );
 };
 

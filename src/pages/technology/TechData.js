@@ -1,4 +1,22 @@
-export const TechData = [
+export const TechImgs = [
+  {
+    id: "t1",
+    url: "image-launch-vehicle-landscape.jpg",
+    alt: "Launch Vehicle",
+  },
+  {
+    id: "t2",
+    url: "image-spaceport-landscape.jpg",
+    alt: "Spaceport",
+  },
+  {
+    id: "t3",
+    url: "image-space-capsule-landscape.jpg",
+    alt: "Space Capsule",
+  },
+];
+
+export const TechInfo = [
   {
     id: "t1",
     title: "launch vehicle",

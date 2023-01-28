@@ -1,15 +1,11 @@
-import { useState } from "react";
-import { Route } from "react-router-dom";
-
 import classes from "./styles/Technology.module.scss";
+import { TechRoute } from "./technology/TechHelper";
 
-import TechImageRoute from "./technology/TechRoute/TechImageRoute";
+import TechImage from "./technology/TechContent/TechImage";
 import TechList from "./technology/TechList";
-import TechDescripRoute from "./technology/TechRoute/TechDescripRoute";
+import TechDescription from "./technology/TechContent/TechDescription";
 
 const Technology = function () {
-  const [content, setContent] = useState(0);
-
   return (
     <div className={classes.technology}>
       <div className={classes.technology__sub}>
@@ -20,7 +16,9 @@ const Technology = function () {
       </div>
 
       <div className={classes.technology__images}>
-        <TechImageRoute />
+        <TechRoute>
+          <TechImage />
+        </TechRoute>
       </div>
 
       <ul className={classes.technology__list}>
@@ -29,9 +27,9 @@ const Technology = function () {
 
       <div className={classes.technology__content}>
         <span>the terminology</span>
-        <Route path="/technology/:techId" exact>
-          <TechDescripRoute contentNum={content} />
-        </Route>
+        <TechRoute>
+          <TechDescription />
+        </TechRoute>
       </div>
     </div>
   );

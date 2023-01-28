@@ -93,7 +93,7 @@ export const fadeAnimation = {
   exit: {
     opacity: 0,
     transition: {
-      duration: 0.1,
+      duration: 0.2,
     },
   },
 };

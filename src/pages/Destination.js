@@ -3,9 +3,11 @@ import background from "../assets/destination/background-destination-mobile.jpg"
 
 import DestinationList from "./destination/DestinationList";
 
-import PlanetImageRoute from "./destination/PlanetsRoute/PlanetImageRoute";
 import PlanetDescriptionRoute from "./destination/PlanetsRoute/PlanetDescriptionRoute";
 import PlanetInformationRoute from "./destination/PlanetsRoute/PlanetInformationRoute";
+
+import { DestRoute } from "./destination/DestHelper";
+import DestImage from "./destination/PlanetsRoute/PlanetsContent/DestImage";
 
 const Destination = function () {
   return (
@@ -24,7 +26,11 @@ const Destination = function () {
           </span>
         </div>
 
-        <PlanetImageRoute classes={classes} />
+        <div className={classes["destination__img-container"]}>
+          <DestRoute>
+            <DestImage />
+          </DestRoute>
+        </div>
 
         <nav>
           <DestinationList classes={classes} />

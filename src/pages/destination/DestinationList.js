@@ -5,19 +5,19 @@ import { linksAnimation } from "../../components/animation/Animation";
 
 const DestinationList = function ({ classes }) {
   const links = [
-    <NavLink to="/moon" activeClassName={classes.active}>
+    <NavLink to="/destination/moon" activeClassName={classes.active}>
       moon
     </NavLink>,
 
-    <NavLink to="/mars" activeClassName={classes.active}>
+    <NavLink to="/destination/mars" activeClassName={classes.active}>
       mars
     </NavLink>,
 
-    <NavLink to="/europa" activeClassName={classes.active}>
+    <NavLink to="/destination/europa" activeClassName={classes.active}>
       europa
     </NavLink>,
 
-    <NavLink to="/titan" activeClassName={classes.active}>
+    <NavLink to="/destination/titan" activeClassName={classes.active}>
       titan
     </NavLink>,
   ];

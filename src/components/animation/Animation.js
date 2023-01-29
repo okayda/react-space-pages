@@ -78,6 +78,29 @@ export const listAnimation = {
   },
 };
 
+export const scaleAnimation = {
+  hidden: {
+    scale: 0.6,
+    opacity: 0,
+  },
+
+  visible: {
+    scale: 1,
+    opacity: 1,
+    transition: {
+      duration: 0.4,
+    },
+  },
+
+  exit: {
+    scale: 0.6,
+    opacity: 0,
+    transition: {
+      duration: 0.4,
+    },
+  },
+};
+
 export const fadeAnimation = {
   hidden: {
     opacity: 0,

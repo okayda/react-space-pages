@@ -1,4 +1,11 @@
-export const CrewData = [
+export const CrewImgs = [
+  { id: "p1", url: "image-douglas-hurley.webp", alt: "Douglas Hurley" },
+  { id: "p2", url: "image-mark-shuttleworth.webp", alt: "Mark Shuttleworth" },
+  { id: "p3", url: "image-victor-glover.webp", alt: "Victor Glover" },
+  { id: "p4", url: "image-anousheh-ansari.webp", alt: "Anousheh Ansari" },
+];
+
+export const CrewInfo = [
   {
     id: "p1",
     position: "commander",

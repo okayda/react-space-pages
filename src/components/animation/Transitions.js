@@ -3,8 +3,9 @@ import AddTrans from "./AddTrans";
 
 import { scaleAnimation } from "./Animation";
 import { fadeAnimation } from "./Animation";
+import { slideAnimation } from "./Animation";
 
-export const ImgSlide = function ({ src, alt }) {
+export const ImgScale = function ({ src, alt }) {
   return <motion.img {...AddTrans(scaleAnimation)} src={src} alt={alt} />;
 };
 
@@ -14,4 +15,8 @@ export const ImgFade = function ({ src, alt }) {
 
 export const ContentFade = function ({ children }) {
   return <motion.div {...AddTrans(fadeAnimation)}>{children}</motion.div>;
+};
+
+export const ContentSlide = function ({ children }) {
+  return <motion.div {...AddTrans(slideAnimation)}>{children}</motion.div>;
 };

@@ -120,3 +120,26 @@ export const fadeAnimation = {
     },
   },
 };
+
+export const slideAnimation = {
+  hidden: {
+    translateX: "-20vw",
+    opacity: 0,
+  },
+
+  visible: {
+    translateX: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.35,
+    },
+  },
+
+  exit: {
+    translateX: "20vw",
+    opacity: 0,
+    transition: {
+      duration: 0.35,
+    },
+  },
+};

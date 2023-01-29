@@ -3,11 +3,12 @@ import background from "../assets/destination/background-destination-mobile.jpg"
 
 import DestinationList from "./destination/DestinationList";
 
-import PlanetDescriptionRoute from "./destination/PlanetsRoute/PlanetDescriptionRoute";
 import PlanetInformationRoute from "./destination/PlanetsRoute/PlanetInformationRoute";
 
 import { DestRoute } from "./destination/DestHelper";
+
 import DestImage from "./destination/PlanetsRoute/PlanetsContent/DestImage";
+import DestDescription from "./destination/PlanetsRoute/PlanetsContent/DestDescription";
 
 const Destination = function () {
   return (
@@ -36,7 +37,9 @@ const Destination = function () {
           <DestinationList classes={classes} />
         </nav>
 
-        <PlanetDescriptionRoute />
+        <DestRoute>
+          <DestDescription />
+        </DestRoute>
       </div>
 
       <div className={classes.destination__information}>

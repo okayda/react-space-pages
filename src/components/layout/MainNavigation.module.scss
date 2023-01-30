@@ -1,5 +1,9 @@
+@use "../../scss" as *;
+
 .header {
   &__wrapper {
+    @include sideGap();
+
     display: flex;
     justify-content: space-between;
     align-items: center;

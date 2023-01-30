@@ -1,6 +1,8 @@
 @use "../../scss" as *;
 
 .destination {
+  @include sideGap();
+
   text-align: center;
 
   &__background {

@@ -1,6 +1,8 @@
 @use "../../scss" as *;
 
 .technology {
+  @include sideGap();
+
   &__sub {
     text-align: center;
     margin-bottom: 3.2rem;

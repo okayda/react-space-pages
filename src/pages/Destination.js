@@ -3,12 +3,10 @@ import background from "../assets/destination/background-destination-mobile.jpg"
 
 import DestinationList from "./destination/DestinationList";
 
-import PlanetInformationRoute from "./destination/PlanetsRoute/PlanetInformationRoute";
-
 import { DestRoute } from "./destination/DestHelper";
-
-import DestImage from "./destination/PlanetsRoute/PlanetsContent/DestImage";
-import DestDescription from "./destination/PlanetsRoute/PlanetsContent/DestDescription";
+import DestImage from "./destination/PlanetsContent/DestImage";
+import DestDescription from "./destination/PlanetsContent/DestDescription";
+import DestInformation from "./destination/PlanetsContent/DestInformation";
 
 const Destination = function () {
   return (
@@ -43,9 +41,9 @@ const Destination = function () {
       </div>
 
       <div className={classes.destination__information}>
-        <ul className={classes["destination__list-travel"]}>
-          <PlanetInformationRoute />
-        </ul>
+        <DestRoute>
+          <DestInformation />
+        </DestRoute>
       </div>
     </div>
   );

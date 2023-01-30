@@ -1,7 +1,7 @@
-import { ContentSlide } from "../../../../components/animation/Transitions";
+import { ContentSlide } from "../../../components/animation/Transitions";
 
-import { DestDesc } from "../../DestData";
-import { DestContentExtract } from "../../DestHelper";
+import { DestDesc } from "../DestData";
+import { DestContentExtract } from "../DestHelper";
 
 const DestDescription = function () {
   const { title, description } = DestContentExtract(DestDesc);

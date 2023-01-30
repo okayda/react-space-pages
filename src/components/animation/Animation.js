@@ -131,7 +131,7 @@ export const slideAnimation = {
     translateX: 0,
     opacity: 1,
     transition: {
-      duration: 0.35,
+      duration: 0.3,
     },
   },
 
@@ -139,7 +139,7 @@ export const slideAnimation = {
     translateX: "20vw",
     opacity: 0,
     transition: {
-      duration: 0.35,
+      duration: 0.25,
     },
   },
 };

@@ -58,16 +58,18 @@ export const DestDesc = [
 ];
 
 //destination information
-const DestInfo = [
+export const DestInfo = [
   {
     id: "moon",
     data: [
       {
+        id: "mo1",
         point: "avg. distance",
         calculation: "384,400 km",
       },
 
       {
+        id: "mo2",
         point: "est. travel time",
         calculation: "3 days",
       },
@@ -78,11 +80,13 @@ const DestInfo = [
     id: "mars",
     data: [
       {
+        id: "ma1",
         point: "avg. distance",
         calculation: "225 MIL. km",
       },
 
       {
+        id: "ma2",
         point: "est. travel time",
         calculation: "9 months",
       },
@@ -92,11 +96,13 @@ const DestInfo = [
     id: "europa",
     data: [
       {
+        id: "eu1",
         point: "avg. distance",
         calculation: "628 MIL. km",
       },
 
       {
+        id: "eu2",
         point: "est. travel time",
         calculation: "3 years",
       },
@@ -106,11 +112,13 @@ const DestInfo = [
     id: "titan",
     data: [
       {
+        id: "ti1",
         point: "avg. distance",
         calculation: "1.6 BIL. km",
       },
 
       {
+        id: "ti2",
         point: "est. travel time",
         calculation: "7 years",
       },

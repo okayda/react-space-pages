@@ -1,0 +1,64 @@
+@use "../../../scss" as *;
+
+.header {
+  &__wrapper {
+    @include sideGap();
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    line-height: 0;
+
+    img {
+      width: 4rem;
+      height: 4rem;
+    }
+  }
+
+  &__burger-active {
+    position: relative;
+    z-index: 10;
+  }
+
+  &__burger {
+    width: 2.4rem;
+    height: 2.1rem;
+  }
+
+  &__list-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 26rem;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(40px);
+
+    ul {
+      height: 270px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      gap: 3.2rem;
+      padding: 0 3.2rem;
+      font-family: "Barlow Condensed", sans-serif;
+
+      span {
+        display: inline;
+        margin-right: 1.4rem;
+        font-weight: 700;
+      }
+
+      a:link,
+      a:visited {
+        text-transform: uppercase;
+        color: #fff;
+        letter-spacing: 2.7px;
+      }
+    }
+  }
+}

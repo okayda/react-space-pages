@@ -1,12 +1,12 @@
 import ReactDOM from "react-dom";
 
-import MainNavigation from "./MainNavigation";
+import HeaderNavBar from "./HeaderNavBar/HeaderNavBar";
 
 const Layout = function (props) {
   return (
     <>
       {ReactDOM.createPortal(
-        <MainNavigation />,
+        <HeaderNavBar />,
         document.getElementById("main-header")
       )}
 

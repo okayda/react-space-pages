@@ -10,10 +10,10 @@ function App() {
   return (
     <section>
       <Layout>
-        {/* <Home /> */}
+        <Home />
         {/* <Destination /> */}
         {/* {<Crew />} */}
-        {<Technology />}
+        {/* {<Technology />} */}
       </Layout>
     </section>
   );

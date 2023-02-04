@@ -1,26 +1,45 @@
-// Mobile Destination Animation
-export const imgAnimation = {
+// Menu Animation
+// ==================================
+export const menuAnimation = {
   hidden: {
-    scale: 0.6,
-    opacity: 0,
+    x: "100%",
   },
 
   visible: {
-    scale: 1,
-    opacity: 1,
+    x: 0,
+
     transition: {
-      duration: 0.4,
+      bounce: 0,
+      duration: 0.25,
     },
   },
 
   exit: {
-    scale: 0.6,
-    opacity: 0,
+    x: "100%",
+
     transition: {
-      duration: 0.4,
+      duration: 0.3,
     },
   },
 };
+
+export const listStaggerAnimation = {
+  open: {
+    transition: {
+      staggerChildren: 0.24,
+      staggerDirection: 1,
+    },
+  },
+};
+
+export const linkStaggerAnimation = {
+  open: { opacity: 1 },
+
+  closed: {
+    opacity: 0,
+  },
+};
+// ==================================
 
 export const linksAnimation = function (index) {
   return {
@@ -40,42 +59,6 @@ export const linksAnimation = function (index) {
       },
     },
   };
-};
-
-export const contentAnimation = {
-  hidden: {
-    translateX: "-20vw",
-    opacity: 0,
-  },
-
-  visible: {
-    translateX: 0,
-    opacity: 1,
-    transition: {
-      duration: 0.35,
-    },
-  },
-
-  exit: {
-    translateX: "20vw",
-    opacity: 0,
-    transition: {
-      duration: 0.35,
-    },
-  },
-};
-
-export const listAnimation = {
-  hidden: {
-    opacity: 0,
-  },
-
-  visible: {
-    opacity: 1,
-    transition: {
-      duration: 0.55,
-    },
-  },
 };
 
 export const scaleAnimation = {

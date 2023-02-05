@@ -1,6 +1,7 @@
 import classes from "./HeaderNavBar.module.scss";
 import Logo from "../../../assets/shared/logo.svg";
 import MobileNav from "./MobileNav/MobileNav";
+import WideNav from "./WideNav/WideNav";
 
 const HeaderNavBar = function () {
   return (
@@ -9,8 +10,9 @@ const HeaderNavBar = function () {
         <img src={Logo} alt="Logo" />
       </a>
 
-      {/* their renderation will be determine through scss modules itself */}
+      {/* their display will be determine through scss modules itself */}
       <MobileNav />
+      <WideNav />
     </div>
   );
 };

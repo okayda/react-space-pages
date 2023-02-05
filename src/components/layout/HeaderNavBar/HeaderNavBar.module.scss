@@ -18,3 +18,11 @@
     }
   }
 }
+
+@include tablet() {
+  .header {
+    &__wrapper {
+      @include wideGap();
+    }
+  }
+}

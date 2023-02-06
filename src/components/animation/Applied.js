@@ -1,4 +1,4 @@
-const AddTrans = function (animation) {
+const Applied = function (animation) {
   return {
     variants: animation,
     initial: "hidden",
@@ -7,4 +7,4 @@ const AddTrans = function (animation) {
   };
 };
 
-export default AddTrans;
+export default Applied;

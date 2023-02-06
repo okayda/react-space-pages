@@ -5,10 +5,10 @@ import burgerIcon from "../../../../assets/shared/icon-hamburger.svg";
 import closeIcon from "../../../../assets/shared/icon-close.svg";
 
 import {
-  MenuSlide,
-  ListStagger,
-  LinkStagger,
-} from "../../../animation/Transitions";
+  SideSlide,
+  SideListStagger,
+  SideLinkStagger,
+} from "../../../animation/MobileMenuAnimate/MobileMenuTransition";
 
 const linkArr = [
   { name: "Home", to: "#", id: 0 },
@@ -18,10 +18,10 @@ const linkArr = [
 ];
 
 const links = linkArr.map(({ name, to, id }) => (
-  <LinkStagger key={id} href={to}>
+  <SideLinkStagger key={id} href={to}>
     <span>0{id}</span>
     {name}
-  </LinkStagger>
+  </SideLinkStagger>
 ));
 
 const MobileNav = function () {
@@ -35,16 +35,16 @@ const MobileNav = function () {
 
       <AnimatePresence>
         {open && (
-          <MenuSlide className={classes["nav__list-wrapper"]}>
+          <SideSlide className={classes["nav__list-wrapper"]}>
             {/* <ul> */}
             <button className={classes.nav__close}>
               <img src={closeIcon} alt="" onClick={cycleOpen} />
             </button>
-            <ListStagger>
+            <SideListStagger>
               {/* <li> */}
               {links}
-            </ListStagger>
-          </MenuSlide>
+            </SideListStagger>
+          </SideSlide>
         )}
       </AnimatePresence>
     </nav>

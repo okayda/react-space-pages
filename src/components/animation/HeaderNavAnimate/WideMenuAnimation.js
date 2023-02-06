@@ -1,4 +1,4 @@
-export const navSlide = {
+export const wideSlide = {
   hidden: {
     x: "100%",
   },
@@ -14,7 +14,7 @@ export const navSlide = {
   },
 };
 
-export const navListStagger = {
+export const wideListStagger = {
   open: {
     transition: {
       delayChildren: 1.2,
@@ -25,7 +25,7 @@ export const navListStagger = {
   },
 };
 
-export const navLinkStagger = {
+export const wideLinkStagger = {
   closed: {
     opacity: 0,
     y: "-20%",

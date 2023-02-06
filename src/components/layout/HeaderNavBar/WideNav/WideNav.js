@@ -1,10 +1,7 @@
 import classes from "./WideNav.module.scss";
 
-import {
-  NavSlide,
-  NavListStagger,
-  NavLinkStagger,
-} from "../../../animation/WideMenuAnimate/WideMenuTransition";
+// T = Transition
+import * as T from "../../../animation/HeaderNavAnimate/HeaderNavTransition";
 
 const linkArr = [
   { name: "Home", to: "#", id: 0 },
@@ -14,19 +11,19 @@ const linkArr = [
 ];
 
 const links = linkArr.map(({ name, to, id }) => (
-  <NavLinkStagger key={id} href={to}>
+  <T.NavLinkStagger key={id} href={to} isMobile={false}>
     <span>0{id}</span>
     {name}
-  </NavLinkStagger>
+  </T.NavLinkStagger>
 ));
 
 const WideNav = function () {
   return (
-    <NavSlide className={classes.nav}>
+    <T.NavSlide className={classes.nav} isMobile={false}>
       <nav>
-        <NavListStagger>{links}</NavListStagger>
+        <T.NavListStagger isMobile={false}>{links}</T.NavListStagger>
       </nav>
-    </NavSlide>
+    </T.NavSlide>
   );
 };
 

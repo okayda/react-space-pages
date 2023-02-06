@@ -4,11 +4,8 @@ import classes from "./MobileNav.module.scss";
 import burgerIcon from "../../../../assets/shared/icon-hamburger.svg";
 import closeIcon from "../../../../assets/shared/icon-close.svg";
 
-import {
-  SideSlide,
-  SideListStagger,
-  SideLinkStagger,
-} from "../../../animation/MobileMenuAnimate/MobileMenuTransition";
+// T = Transition
+import * as T from "../../../animation/HeaderNavAnimate/HeaderNavTransition";
 
 const linkArr = [
   { name: "Home", to: "#", id: 0 },
@@ -18,10 +15,10 @@ const linkArr = [
 ];
 
 const links = linkArr.map(({ name, to, id }) => (
-  <SideLinkStagger key={id} href={to}>
+  <T.NavLinkStagger key={id} href={to} isMobile={true}>
     <span>0{id}</span>
     {name}
-  </SideLinkStagger>
+  </T.NavLinkStagger>
 ));
 
 const MobileNav = function () {
@@ -35,16 +32,13 @@ const MobileNav = function () {
 
       <AnimatePresence>
         {open && (
-          <SideSlide className={classes["nav__list-wrapper"]}>
-            {/* <ul> */}
+          <T.NavSlide className={classes["nav__list-wrapper"]} isMobile={true}>
             <button className={classes.nav__close}>
               <img src={closeIcon} alt="" onClick={cycleOpen} />
             </button>
-            <SideListStagger>
-              {/* <li> */}
-              {links}
-            </SideListStagger>
-          </SideSlide>
+
+            <T.NavListStagger isMobile={true}>{links}</T.NavListStagger>
+          </T.NavSlide>
         )}
       </AnimatePresence>
     </nav>

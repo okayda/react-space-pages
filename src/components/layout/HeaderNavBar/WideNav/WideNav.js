@@ -12,7 +12,6 @@ const linkArr = [
 
 const links = linkArr.map(({ name, to, id }) => (
   <T.NavLinkStagger key={id} href={to} isMobile={false}>
-    <span>0{id}</span>
     {name}
   </T.NavLinkStagger>
 ));

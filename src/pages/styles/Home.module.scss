@@ -1,7 +1,9 @@
 @use "../../scss" as *;
 
 .home {
-  @include sideGap();
+  max-width: 375px;
+  padding: 0 2.4rem;
+  margin: 0 auto;
 
   text-align: center;
   margin-top: 6.4rem;
@@ -36,7 +38,7 @@
     background-color: $white;
     width: 15rem;
     height: 15rem;
-    border-radius: 100px;
+    border-radius: 100%;
 
     &::before {
       content: "explore";
@@ -49,6 +51,37 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+    }
+  }
+
+  @include tablet() {
+    max-width: 450px;
+    padding: 0;
+
+    padding-top: 10.6rem;
+    margin-top: 0;
+
+    &__content {
+      span {
+        font-size: 2rem;
+      }
+
+      h1 {
+        font-size: 15rem;
+      }
+
+      p {
+        font-size: 1.6rem;
+      }
+    }
+
+    &__explore {
+      width: 24rem;
+      height: 24rem;
+
+      &::before {
+        font-size: 3.2rem;
+      }
     }
   }
 }

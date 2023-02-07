@@ -1,13 +1,21 @@
 @use "../../scss" as *;
 
 .technology {
-  @include sideGap();
+  padding: 0 2.4rem;
+  max-width: 375px;
+  margin: 0 auto;
+
+  @include tablet() {
+    padding: 4rem 0;
+    max-width: none;
+  }
 
   &__sub {
-    text-align: center;
-    margin-bottom: 3.2rem;
+    text-align: left;
+    margin: 0 4rem 3.2rem;
 
     span {
+      font-size: 2rem;
       font-family: "Barlow Condensed", sans-serif;
       text-transform: uppercase;
       letter-spacing: 2.7px;
@@ -32,13 +40,19 @@
       width: 100%;
       height: 170px;
     }
+
+    @include tablet() {
+      img {
+        height: 310px;
+      }
+    }
   }
 
   &__list {
     display: flex;
     justify-content: center;
     height: 100%;
-    gap: 3.2rem;
+    gap: 1.6rem;
     margin-bottom: 2.6rem;
 
     a:link,
@@ -55,6 +69,16 @@
     a:active {
       color: #333;
       background-color: $white;
+    }
+
+    @include tablet() {
+      margin-bottom: 4.4rem;
+
+      a:link,
+      a:visited {
+        font-size: 2.4rem;
+        padding: 1.56rem 2.32rem;
+      }
     }
   }
 
@@ -78,6 +102,21 @@
     p {
       max-width: 360px;
       margin: 0 auto;
+    }
+
+    @include tablet {
+      span {
+        font-size: 1.6rem;
+        margin-bottom: 1.6rem;
+      }
+
+      h2 {
+        font-size: 4rem;
+      }
+
+      p {
+        max-width: 440px;
+      }
     }
   }
 }

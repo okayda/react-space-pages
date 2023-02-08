@@ -11,8 +11,10 @@ const SwiperConfig = function () {
   };
 
   return {
-    spaceBetween: 40,
+    slidesPerView: 1,
+    spaceBetween: 120,
     centeredSlides: true,
+
     navigation: true,
     modules: [Autoplay, Pagination, Navigation],
     style: manualStyles,

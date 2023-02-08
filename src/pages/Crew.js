@@ -27,10 +27,12 @@ const Crew = function () {
         <span className={classes["crew__sub--title"]}>meet your crew</span>
       </div>
 
-      <CrewImages updateContent={updateContent} />
+      <div className={classes["crew__swiper-container"]}>
+        <CrewImages updateContent={updateContent} />
 
-      <div className={classes.crew__content}>
-        <CrewDescription contentNum={content} />
+        <div className={classes.crew__content}>
+          <CrewDescription contentNum={content} />
+        </div>
       </div>
     </div>
   );

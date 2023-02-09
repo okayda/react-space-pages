@@ -14,6 +14,7 @@
 
   ul {
     display: flex;
+    justify-content: center;
     gap: 3.7rem;
 
     a:link,
@@ -28,10 +29,28 @@
       color: #fff;
     }
   }
-}
 
-@include tablet() {
-  .nav {
+  @include tablet() {
     display: block;
+  }
+
+  @include desktop() {
+    padding: 0 18rem 0 12.3rem;
+    counter-set: link-counter;
+
+    ul {
+      gap: 4.8rem;
+
+      a:link,
+      a:visited {
+        font-size: 1.6rem;
+        counter-increment: link-counter;
+
+        &::before {
+          content: "0" counter(link-counter);
+          margin-right: 1.1rem;
+        }
+      }
+    }
   }
 }

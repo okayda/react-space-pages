@@ -3,16 +3,16 @@
 .home {
   max-width: 375px;
   padding: 0 2.4rem;
-  margin: 0 auto;
+  margin: 6.4rem auto 0;
 
   text-align: center;
-  margin-top: 6.4rem;
 
   &__background {
     position: absolute;
     top: 0;
     left: 0;
     z-index: -10;
+    object-fit: fill;
   }
 
   &__content {
@@ -28,6 +28,33 @@
 
     h1 {
       font-size: 8rem;
+    }
+
+    @include tablet() {
+      span {
+        font-size: 2rem;
+      }
+
+      h1 {
+        font-size: 15rem;
+      }
+
+      p {
+        font-size: 1.6rem;
+      }
+    }
+
+    @include desktop() {
+      max-width: 450px;
+      margin-bottom: 0;
+
+      span {
+        font-size: 2.8rem;
+      }
+
+      p {
+        font-size: 1.8rem;
+      }
     }
   }
 
@@ -52,36 +79,38 @@
       left: 50%;
       transform: translate(-50%, -50%);
     }
-  }
 
-  @include tablet() {
-    max-width: 450px;
-    padding: 0;
-
-    padding-top: 10.6rem;
-    margin-top: 0;
-
-    &__content {
-      span {
-        font-size: 2rem;
-      }
-
-      h1 {
-        font-size: 15rem;
-      }
-
-      p {
-        font-size: 1.6rem;
-      }
-    }
-
-    &__explore {
+    @include tablet() {
       width: 24rem;
       height: 24rem;
 
       &::before {
         font-size: 3.2rem;
       }
+    }
+
+    @include desktop {
+      width: 27rem;
+      height: 27rem;
+    }
+  }
+
+  @include tablet() {
+    max-width: 450px;
+    padding: 10.6rem 0 0;
+    margin: 0 auto 0;
+  }
+
+  @include desktop() {
+    text-align: left;
+    padding: 16rem 0 0;
+    max-width: 1400px;
+
+    &__content-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      justify-items: center;
     }
   }
 }

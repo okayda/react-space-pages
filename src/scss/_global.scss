@@ -75,7 +75,8 @@ a:visited {
 }
 
 .container {
-  margin: 0 auto;
+  // max-width: 1920px;
+  // margin: 0 auto;
   height: 100vh;
 }
 
@@ -84,6 +85,10 @@ a:visited {
 }
 
 @include tablet() {
+  #main-header {
+    padding: 0;
+  }
+
   p {
     font-size: 1.6rem;
   }

@@ -11,13 +11,21 @@
     align-items: center;
 
     @include tablet() {
-      padding: 0 4rem;
+      margin-top: 2.4rem;
       max-width: 730px;
+      padding: 0 4rem;
     }
 
     @include desktop() {
+      margin-top: 6.4rem;
       max-width: 1400px;
-      padding: 0 5.5rem;
+      padding: 0 0 0 5.5rem;
+    }
+
+    @include large() {
+      margin-top: 0;
+      max-width: 1620px;
+      position: relative;
     }
   }
 

@@ -21,3 +21,15 @@
     @content;
   }
 }
+
+@mixin large-desktop() {
+  @media only screen and (min-width: 1440px) {
+    @content;
+  }
+}
+
+@mixin large() {
+  @media only screen and (min-width: 1920px) {
+    @content;
+  }
+}

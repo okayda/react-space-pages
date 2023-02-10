@@ -22,14 +22,14 @@
   }
 }
 
-@mixin large-desktop() {
+@mixin large() {
   @media only screen and (min-width: 1440px) {
     @content;
   }
 }
 
-@mixin large() {
-  @media only screen and (min-width: 1920px) {
+@mixin extra-large() {
+  @media only screen and (min-width: 2300px) {
     @content;
   }
 }

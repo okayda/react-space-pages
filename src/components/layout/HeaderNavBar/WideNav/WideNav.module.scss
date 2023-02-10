@@ -35,7 +35,7 @@
   }
 
   @include desktop() {
-    margin-top: 3.8rem;
+    margin-top: 2.4rem;
     padding: 0 18rem 0 12.3rem;
     counter-set: link-counter;
 
@@ -53,21 +53,24 @@
         }
       }
     }
-
-    @include large-desktop() {
-      &::before {
-        content: " ";
-        width: 480px;
-        height: 1px;
-        background-color: darken(#fff, 65%);
-        position: absolute;
-        top: 50%;
-        left: -50%;
-      }
-    }
   }
 
   @include large() {
+    margin-top: 3.4rem;
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: -50%;
+
+      content: " ";
+      width: 48rem;
+      height: 1px;
+      background-color: darken(#fff, 65%);
+    }
+  }
+
+  @include extra-large() {
     margin-top: 0;
     position: static;
   }

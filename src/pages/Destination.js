@@ -17,33 +17,35 @@ const Destination = function () {
         className={classes.destination__background}
       />
 
-      <div className={classes.destination__content}>
-        <div className={classes.destination__sub}>
-          <span className={classes["destination__sub--num"]}>01</span>
-          <span className={classes["destination__sub--title"]}>
-            pick your destination
-          </span>
-        </div>
+      <div className={classes.destination__sub}>
+        <span className={classes["destination__sub--num"]}>01</span>
+        <span className={classes["destination__sub--title"]}>
+          pick your destination
+        </span>
+      </div>
 
+      <div className={classes.destination__content}>
         <div className={classes["destination__img-container"]}>
           <DestRoute>
             <DestImage />
           </DestRoute>
         </div>
 
-        <nav>
-          <DestinationList classes={classes} />
-        </nav>
+        <div className={classes["destination__sub-content"]}>
+          <nav>
+            <DestinationList classes={classes} />
+          </nav>
 
-        <DestRoute>
-          <DestDescription />
-        </DestRoute>
-      </div>
+          <DestRoute>
+            <DestDescription />
+          </DestRoute>
 
-      <div className={classes.destination__information}>
-        <DestRoute>
-          <DestInformation />
-        </DestRoute>
+          <div className={classes.destination__information}>
+            <DestRoute>
+              <DestInformation />
+            </DestRoute>
+          </div>
+        </div>
       </div>
     </div>
   );

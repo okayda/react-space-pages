@@ -106,7 +106,7 @@ export const fadeAnimation = {
 
 export const slideAnimation = {
   hidden: {
-    translateX: "-20vw",
+    translateX: "-8vw",
     opacity: 0,
   },
 
@@ -119,7 +119,7 @@ export const slideAnimation = {
   },
 
   exit: {
-    translateX: "20vw",
+    translateX: "8vw",
     opacity: 0,
     transition: {
       duration: 0.25,

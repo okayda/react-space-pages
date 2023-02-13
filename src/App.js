@@ -10,8 +10,8 @@ function App() {
   return (
     <section>
       <Layout>
-        <Home />
-        {/* <Destination /> */}
+        {/* <Home /> */}
+        <Destination />
         {/* {<Crew />} */}
         {/* {<Technology />} */}
       </Layout>

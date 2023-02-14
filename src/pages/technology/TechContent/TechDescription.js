@@ -8,6 +8,7 @@ const TechDescription = function () {
 
   return (
     <ContentFade>
+      <span>the terminology</span>
       <h2>{title}</h2>
       <p>{information}</p>
     </ContentFade>

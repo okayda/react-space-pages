@@ -15,21 +15,22 @@ const Technology = function () {
         </span>
       </div>
 
-      <div className={classes.technology__images}>
-        <TechRoute>
-          <TechImage />
-        </TechRoute>
-      </div>
-
-      <ul className={classes.technology__list}>
-        <TechList active={classes.active} />
-      </ul>
-
       <div className={classes.technology__content}>
-        <span>the terminology</span>
-        <TechRoute>
-          <TechDescription />
-        </TechRoute>
+        <div className={classes.technology__images}>
+          <TechRoute>
+            <TechImage />
+          </TechRoute>
+        </div>
+
+        <ul className={classes.technology__list}>
+          <TechList active={classes.active} />
+        </ul>
+
+        <div className={classes.technology__information}>
+          <TechRoute>
+            <TechDescription />
+          </TechRoute>
+        </div>
       </div>
     </div>
   );

@@ -2,16 +2,19 @@ export const TechImgs = [
   {
     id: "t1",
     url: "image-launch-vehicle-landscape.jpg",
+    urlTwo: "image-launch-vehicle-portrait.jpg",
     alt: "Launch Vehicle",
   },
   {
     id: "t2",
     url: "image-spaceport-landscape.jpg",
+    urlTwo: "image-spaceport-portrait.jpg",
     alt: "Spaceport",
   },
   {
     id: "t3",
     url: "image-space-capsule-landscape.jpg",
+    urlTwo: "image-space-capsule-portrait.jpg",
     alt: "Space Capsule",
   },
 ];

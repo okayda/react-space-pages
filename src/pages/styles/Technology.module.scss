@@ -10,6 +10,11 @@
     max-width: none;
   }
 
+  @include desktop() {
+    max-width: 1500px;
+    padding: 10rem 6.4rem 2.4rem;
+  }
+
   &__sub {
     text-align: left;
     margin: 0 4rem 3.2rem;
@@ -31,6 +36,29 @@
       font-weight: 400;
       color: $white;
     }
+
+    @include tablet() {
+      span {
+        font-size: 2rem;
+      }
+    }
+
+    @include desktop() {
+      margin: 0 0 2.6rem;
+
+      span {
+        font-size: 2.8rem;
+      }
+    }
+  }
+
+  &__content {
+    @include desktop() {
+      display: grid;
+      grid-template-columns: 0.2fr 1fr 1fr;
+      align-items: center;
+      gap: 8rem;
+    }
   }
 
   &__images {
@@ -43,7 +71,19 @@
 
     @include tablet() {
       img {
+        width: 100%;
         height: 310px;
+      }
+    }
+
+    @include desktop() {
+      order: 3;
+      text-align: right;
+      margin-bottom: 0;
+
+      img {
+        width: 520px;
+        height: 530px;
       }
     }
   }
@@ -80,9 +120,22 @@
         padding: 1.56rem 2.32rem;
       }
     }
+
+    @include desktop() {
+      order: 1;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 0;
+
+      a:link,
+      a:visited {
+        font-size: 3.2rem;
+        padding: 2.04rem 3.12rem;
+      }
+    }
   }
 
-  &__content {
+  &__information {
     text-align: center;
 
     span {
@@ -116,6 +169,25 @@
 
       p {
         max-width: 440px;
+      }
+    }
+
+    @include desktop() {
+      order: 2;
+      text-align: left;
+
+      span {
+        margin-bottom: 1.1rem;
+      }
+
+      h2 {
+        font-size: 5.6rem;
+      }
+
+      p {
+        margin: 0;
+        font-size: 1.8rem;
+        max-width: 540px;
       }
     }
   }

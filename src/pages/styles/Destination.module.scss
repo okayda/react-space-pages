@@ -6,12 +6,13 @@
   margin: 0 auto;
 
   @include tablet() {
-    padding: 4rem 0;
+    padding: 0;
     max-width: 570px;
   }
 
   @include desktop() {
-    max-width: 1050px;
+    max-width: 1300px;
+    padding: 0 8rem 0;
   }
 
   &__background {
@@ -127,6 +128,7 @@
       p {
         font-size: 1.8rem;
         padding-bottom: 5.4rem;
+        max-width: 450px;
       }
     }
   }

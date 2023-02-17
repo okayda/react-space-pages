@@ -1,5 +1,8 @@
 import classes from "./styles/Destination.module.scss";
-import background from "../assets/destination/background-destination-mobile.jpg";
+
+import mobileBG from "../assets/destination/background-destination-mobile.jpg";
+import tabletBG from "../assets/destination/background-destination-tablet.jpg";
+import desktopBG from "../assets/destination/background-destination-desktop.jpg";
 
 import DestinationList from "./destination/DestinationList";
 
@@ -11,11 +14,16 @@ import DestInformation from "./destination/PlanetsContent/DestInformation";
 const Destination = function () {
   return (
     <div className={classes.destination}>
-      <img
-        src={background}
-        alt="Space"
-        className={classes.destination__background}
-      />
+      <picture>
+        <source srcSet={tabletBG} media="(min-width: 660px)" />
+        <source srcSet={desktopBG} media="(min-width: 1100px)" />
+
+        <img
+          src={mobileBG}
+          alt="Space"
+          className={classes.destination__background}
+        />
+      </picture>
 
       <div className={classes.destination__sub}>
         <span className={classes["destination__sub--num"]}>01</span>

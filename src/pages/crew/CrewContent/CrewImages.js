@@ -1,3 +1,5 @@
+import { useEffect, useState, useRef } from "react";
+
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperConfig from "../SwiperConfig";
 
@@ -7,7 +9,16 @@ import "./CrewImages.scss";
 
 import { CrewImgs } from "../CrewData";
 
-const CrewImages = function ({ updateContent }) {
+const CrewImages = function ({ updateContent, setCount, count }) {
+  const swiperRef = useRef(null);
+
+  useEffect(() => {
+    if (count === null) return;
+
+    swiperRef.current.swiper.slideTo(+count);
+    setCount(null);
+  }, [count]);
+
   const persons = CrewImgs.map(({ url, alt, id }) => {
     return (
       <SwiperSlide key={id}>
@@ -18,6 +29,7 @@ const CrewImages = function ({ updateContent }) {
 
   return (
     <Swiper
+      ref={swiperRef}
       onRealIndexChange={(e) => updateContent(e.activeIndex)}
       {...SwiperConfig()}
     >

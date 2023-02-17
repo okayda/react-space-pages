@@ -6,13 +6,13 @@
   margin: 0 auto;
 
   @include tablet() {
-    padding: 4rem 0;
+    padding: 0;
     max-width: none;
   }
 
   @include desktop() {
     max-width: 1500px;
-    padding: 10rem 6.4rem 2.4rem;
+    padding: 0 6.4rem 2.4rem;
   }
 
   &__sub {

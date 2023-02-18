@@ -14,11 +14,13 @@
       margin-top: 2rem;
       padding: 0 4rem;
       max-width: 84rem;
+      margin-bottom: 8rem;
     }
 
     @include desktop() {
       margin-top: 4.4rem;
-      max-width: 160rem;
+      max-width: 170rem;
+      margin-bottom: 10rem;
     }
 
     @include large() {

@@ -115,7 +115,8 @@
   }
 
   @include large() {
-    max-width: 170rem;
+    padding-top: 10rem;
+    max-width: 165rem;
   }
 
   @include extra-large() {

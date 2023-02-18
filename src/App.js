@@ -12,8 +12,8 @@ function App() {
       <Layout>
         {/* <Home /> */}
         {/* <Destination /> */}
-        {<Crew />}
-        {/* {<Technology />} */}
+        {/* {<Crew />} */}
+        {<Technology />}
       </Layout>
     </section>
   );

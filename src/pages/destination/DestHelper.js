@@ -1,4 +1,4 @@
-import { Route, Switch, useLocation, useParams } from "react-router-dom";
+import { Routes, Route, useLocation, useParams } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 
 export const DestRoute = function ({ children }) {
@@ -6,11 +6,9 @@ export const DestRoute = function ({ children }) {
 
   return (
     <AnimatePresence mode="wait" initial={true}>
-      <Switch location={location} key={location.pathname}>
-        <Route path="/destination/:destId" exact>
-          {children}
-        </Route>
-      </Switch>
+      <Routes location={location} key={location.pathname}>
+        <Route path="/destination/:destId" element={children} exact />
+      </Routes>
     </AnimatePresence>
   );
 };

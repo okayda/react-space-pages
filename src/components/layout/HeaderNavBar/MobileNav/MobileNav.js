@@ -1,24 +1,19 @@
 import { AnimatePresence, useCycle } from "framer-motion";
 import classes from "./MobileNav.module.scss";
 
+import { linksData } from "../HeaderData";
+
 import burgerIcon from "../../../../assets/shared/icon-hamburger.svg";
 import closeIcon from "../../../../assets/shared/icon-close.svg";
 
 // T = Transition
 import * as T from "../../../animation/HeaderNavAnimate/HeaderNavTransition";
 
-const linkArr = [
-  { name: "Home", to: "#", id: 0 },
-  { name: "Destination", to: "#", id: 1 },
-  { name: "Crew", to: "#", id: 2 },
-  { name: "Technology", to: "#", id: 3 },
-];
-
-const links = linkArr.map(({ name, to, id }) => (
-  <T.NavLinkStagger key={id} href={to} isMobile={true}>
+const links = linksData.map(({ name, to, id }) => (
+  <T.NavListStagger key={id} href={to} isMobile={true}>
     <span>0{id}</span>
     {name}
-  </T.NavLinkStagger>
+  </T.NavListStagger>
 ));
 
 const MobileNav = function () {
@@ -37,7 +32,7 @@ const MobileNav = function () {
               <img src={closeIcon} alt="" onClick={cycleOpen} />
             </button>
 
-            <T.NavListStagger isMobile={true}>{links}</T.NavListStagger>
+            <T.NavMainListStagger isMobile={true}>{links}</T.NavMainListStagger>
           </T.NavSlide>
         )}
       </AnimatePresence>

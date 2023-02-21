@@ -1,30 +1,12 @@
-export const TechImgs = [
-  {
-    id: "t1",
-    url: "image-launch-vehicle-landscape.jpg",
-    urlTwo: "image-launch-vehicle-portrait.jpg",
-    alt: "Launch Vehicle",
-  },
-  {
-    id: "t2",
-    url: "image-spaceport-landscape.jpg",
-    urlTwo: "image-spaceport-portrait.jpg",
-    alt: "Spaceport",
-  },
-  {
-    id: "t3",
-    url: "image-space-capsule-landscape.jpg",
-    urlTwo: "image-space-capsule-portrait.jpg",
-    alt: "Space Capsule",
-  },
-];
-
-export const TechInfo = [
+export const TechData = [
   {
     id: "t1",
     title: "launch vehicle",
     information:
       "A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from Earth's surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, it's quite an awe-inspiring sight on the launch pad!",
+    url: "image-launch-vehicle-landscape.jpg",
+    urlTwo: "image-launch-vehicle-portrait.jpg",
+    alt: "Launch Vehicle",
   },
 
   {
@@ -32,6 +14,9 @@ export const TechInfo = [
     title: "spaceport",
     information:
       "A space capsule is an often-crewed spacecraft that uses a blunt-body reentry capsule to reenter the Earth's atmosphere without wings. Our capsule is where you'll spend your time during the flight. It includes a space gym, cinema, and plenty of other activities to keep you entertained.",
+    url: "image-spaceport-landscape.jpg",
+    urlTwo: "image-spaceport-portrait.jpg",
+    alt: "Spaceport",
   },
 
   {
@@ -39,5 +24,8 @@ export const TechInfo = [
     title: "space capsule",
     information:
       "Pilot on the first operational flight of the SpaceX Crew Dragon to the International Space Station. Glover is a commander in the U.S. Navy where he pilots an F/A-18.He was a crew member of Expedition 64, and served as a station systems flight engineer.",
+    url: "image-space-capsule-landscape.jpg",
+    urlTwo: "image-space-capsule-portrait.jpg",
+    alt: "Space Capsule",
   },
 ];

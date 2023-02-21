@@ -1,3 +1,5 @@
+import { Routes, Route } from "react-router-dom";
+
 import Layout from "./components/layout/Layout";
 import "./scss/_global.scss";
 
@@ -10,10 +12,13 @@ function App() {
   return (
     <section>
       <Layout>
-        {/* <Home /> */}
-        {/* <Destination /> */}
-        {/* {<Crew />} */}
-        {<Technology />}
+        <Routes>
+          <Route path="/" element={<Home />} exact />
+          <Route path="/home" element={<Home />} />
+          <Route path="/destination" element={<Destination />} />
+          <Route path="/crew" element={<Crew />} />
+          <Route path="/technology/:techId" element={<Technology />} />
+        </Routes>
       </Layout>
     </section>
   );

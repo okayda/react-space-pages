@@ -1,9 +1,7 @@
 import classes from "./styles/Technology.module.scss";
-import { TechRoute } from "./technology/TechHelper";
 
-import TechImage from "./technology/TechContent/TechImage";
 import TechList from "./technology/TechList";
-import TechDescription from "./technology/TechContent/TechDescription";
+import RenderData from "./technology/RenderData";
 
 const Technology = function () {
   return (
@@ -16,20 +14,14 @@ const Technology = function () {
       </div>
 
       <div className={classes.technology__content}>
-        <div className={classes.technology__images}>
-          <TechRoute>
-            <TechImage />
-          </TechRoute>
-        </div>
+        <div className={classes.technology__images}>{RenderData("Image")}</div>
 
         <ul className={classes.technology__list}>
           <TechList active={classes.active} />
         </ul>
 
         <div className={classes.technology__information}>
-          <TechRoute>
-            <TechDescription />
-          </TechRoute>
+          {RenderData("Description")}
         </div>
       </div>
     </div>

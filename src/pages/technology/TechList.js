@@ -4,19 +4,28 @@ const TechList = function ({ active }) {
   return (
     <>
       <li>
-        <NavLink to="/technology/t1" activeClassName={active}>
+        <NavLink
+          className={(navData) => (navData.isActive ? active : "")}
+          to="/technology/t1"
+        >
           1
         </NavLink>
       </li>
 
       <li>
-        <NavLink to="/technology/t2" activeClassName={active}>
+        <NavLink
+          className={(navData) => (navData.isActive ? active : "")}
+          to="/technology/t2"
+        >
           2
         </NavLink>
       </li>
 
       <li>
-        <NavLink to="/technology/t3" activeClassName={active}>
+        <NavLink
+          className={(navData) => (navData.isActive ? active : "")}
+          to="/technology/t3"
+        >
           3
         </NavLink>
       </li>

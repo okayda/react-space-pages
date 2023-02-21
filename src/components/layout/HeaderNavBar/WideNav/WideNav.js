@@ -1,26 +1,23 @@
+import { NavLink } from "react-router-dom";
+
 import classes from "./WideNav.module.scss";
+
+import { linksData } from "../HeaderData";
 
 // T = Transition
 import * as T from "../../../animation/HeaderNavAnimate/HeaderNavTransition";
 
-const linkArr = [
-  { name: "Home", to: "#", id: 0 },
-  { name: "Destination", to: "#", id: 1 },
-  { name: "Crew", to: "#", id: 2 },
-  { name: "Technology", to: "#", id: 3 },
-];
-
-const links = linkArr.map(({ name, to, id }) => (
-  <T.NavLinkStagger key={id} href={to} isMobile={false}>
-    {name}
-  </T.NavLinkStagger>
+const links = linksData.map(({ name, to, id }) => (
+  <T.NavListStagger key={id} isMobile={false}>
+    <NavLink to={to}>{name}</NavLink>
+  </T.NavListStagger>
 ));
 
 const WideNav = function () {
   return (
     <T.NavSlide className={classes.nav} isMobile={false}>
       <nav>
-        <T.NavListStagger isMobile={false}>{links}</T.NavListStagger>
+        <T.NavMainListStagger isMobile={false}>{links}</T.NavMainListStagger>
       </nav>
     </T.NavSlide>
   );

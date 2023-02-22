@@ -1,47 +1,4 @@
-// Menu Animation
-// ==================================
-export const menuAnimation = {
-  hidden: {
-    x: "100%",
-  },
-
-  visible: {
-    x: 0,
-
-    transition: {
-      bounce: 0,
-      duration: 0.25,
-    },
-  },
-
-  exit: {
-    x: "100%",
-
-    transition: {
-      duration: 0.3,
-    },
-  },
-};
-
-export const listStaggerAnimation = {
-  open: {
-    transition: {
-      staggerChildren: 0.24,
-      staggerDirection: 1,
-    },
-  },
-};
-
-export const linkStaggerAnimation = {
-  open: { opacity: 1 },
-
-  closed: {
-    opacity: 0,
-  },
-};
-// ==================================
-
-export const linksAnimation = function (index) {
+export const Diagonal = function (index) {
   return {
     hidden: {
       opacity: 0,
@@ -61,7 +18,7 @@ export const linksAnimation = function (index) {
   };
 };
 
-export const scaleAnimation = {
+export const Scale = {
   hidden: {
     scale: 0.6,
     opacity: 0,
@@ -84,7 +41,7 @@ export const scaleAnimation = {
   },
 };
 
-export const fadeAnimation = {
+export const Fade = {
   hidden: {
     opacity: 0,
   },
@@ -104,7 +61,7 @@ export const fadeAnimation = {
   },
 };
 
-export const slideAnimation = {
+export const Slide = {
   hidden: {
     translateX: "-8vw",
     opacity: 0,

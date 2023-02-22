@@ -1,4 +1,4 @@
-export const mobileSlide = {
+export const MobileSlide = {
   hidden: {
     x: "100%",
   },
@@ -21,7 +21,7 @@ export const mobileSlide = {
   },
 };
 
-export const mobileListStagger = {
+export const MobileListStagger = {
   open: {
     transition: {
       staggerChildren: 0.24,
@@ -30,7 +30,7 @@ export const mobileListStagger = {
   },
 };
 
-export const mobileLinkStagger = {
+export const MobileLinkStagger = {
   open: { opacity: 1 },
 
   closed: {

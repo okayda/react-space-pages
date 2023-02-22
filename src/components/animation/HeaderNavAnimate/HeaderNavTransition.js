@@ -10,7 +10,7 @@ export const NavSlide = function ({ children, className, isMobile }) {
   return (
     <motion.div
       className={className}
-      {...Applied(isMobile ? M.mobileSlide : W.wideSlide)}
+      {...Applied(isMobile ? M.MobileSlide : W.WideSlide)}
     >
       {children}
     </motion.div>
@@ -20,7 +20,7 @@ export const NavSlide = function ({ children, className, isMobile }) {
 export const NavMainListStagger = function ({ children, isMobile }) {
   return (
     <motion.ul
-      {...Applied(isMobile ? M.mobileListStagger : W.wideListStagger)}
+      {...Applied(isMobile ? M.MobileListStagger : W.WideListStagger)}
       initial="closed"
       animate="open"
     >
@@ -34,7 +34,7 @@ export const NavListStagger = function ({ children, href, isMobile }) {
     <motion.li
       href={href}
       whileHover={{ scale: 1.08 }}
-      variants={isMobile ? M.mobileLinkStagger : W.wideLinkStagger}
+      variants={isMobile ? M.MobileLinkStagger : W.WideLinkStagger}
     >
       {children}
     </motion.li>

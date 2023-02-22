@@ -1,20 +1,24 @@
 import { motion } from "framer-motion";
 import Applied from "./Applied";
 
-import { scaleAnimation, fadeAnimation, slideAnimation } from "./Animation";
+import { Scale, Fade, Slide, Diagonal } from "./Animation";
 
 export const ImgScale = function ({ src, alt }) {
-  return <motion.img {...Applied(scaleAnimation)} src={src} alt={alt} />;
+  return <motion.img {...Applied(Scale)} src={src} alt={alt} />;
 };
 
 export const ImgFade = function ({ src, alt }) {
-  return <motion.img {...Applied(fadeAnimation)} src={src} alt={alt} />;
+  return <motion.img {...Applied(Fade)} src={src} alt={alt} />;
 };
 
 export const ContentFade = function ({ children }) {
-  return <motion.div {...Applied(fadeAnimation)}>{children}</motion.div>;
+  return <motion.div {...Applied(Fade)}>{children}</motion.div>;
 };
 
 export const ContentSlide = function ({ children }) {
-  return <motion.div {...Applied(slideAnimation)}>{children}</motion.div>;
+  return <motion.div {...Applied(Slide)}>{children}</motion.div>;
+};
+
+export const DiagonalList = function ({ children, delay }) {
+  return <motion.li {...Applied(Diagonal(delay))}>{children}</motion.li>;
 };

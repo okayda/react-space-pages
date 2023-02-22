@@ -4,12 +4,8 @@ import mobileBG from "../assets/destination/background-destination-mobile.jpg";
 import tabletBG from "../assets/destination/background-destination-tablet.jpg";
 import desktopBG from "../assets/destination/background-destination-desktop.jpg";
 
+import RenderData from "./destination/RenderData";
 import DestinationList from "./destination/DestinationList";
-
-import { DestRoute } from "./destination/DestHelper";
-import DestImage from "./destination/PlanetsContent/DestImage";
-import DestDescription from "./destination/PlanetsContent/DestDescription";
-import DestInformation from "./destination/PlanetsContent/DestInformation";
 
 const Destination = function () {
   return (
@@ -34,9 +30,7 @@ const Destination = function () {
 
       <div className={classes.destination__content}>
         <div className={classes["destination__img-container"]}>
-          <DestRoute>
-            <DestImage />
-          </DestRoute>
+          {RenderData("Image")}
         </div>
 
         <div className={classes["destination__sub-content"]}>
@@ -44,14 +38,10 @@ const Destination = function () {
             <DestinationList classes={classes} />
           </nav>
 
-          <DestRoute>
-            <DestDescription />
-          </DestRoute>
+          {RenderData("Description")}
 
           <div className={classes.destination__information}>
-            <DestRoute>
-              <DestInformation />
-            </DestRoute>
+            {RenderData("Information")}
           </div>
         </div>
       </div>

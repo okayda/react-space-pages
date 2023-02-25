@@ -3,6 +3,9 @@
 .nav {
   &__burger,
   &__close {
+    position: relative;
+    z-index: 100;
+
     width: 2.4rem;
     height: 2.1rem;
   }

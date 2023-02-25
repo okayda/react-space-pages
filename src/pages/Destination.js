@@ -1,18 +1,23 @@
+import { useState } from "react";
+
 import classes from "./styles/Destination.module.scss";
 
 import mobileBG from "../assets/destination/background-destination-mobile.jpg";
 import tabletBG from "../assets/destination/background-destination-tablet.jpg";
 import desktopBG from "../assets/destination/background-destination-desktop.jpg";
 
-import RenderData from "./destination/RenderData";
-import DestinationList from "./destination/DestinationList";
+import RenderDest from "./destination/RenderDest";
+import DestinationList from "./destination/Contents/DestinationList";
+import { RouteFade } from "../components/animation/Transitions";
 
 const Destination = function () {
+  const [currPlanet, setPlanet] = useState("moon");
+
   return (
-    <div className={classes.destination}>
+    <RouteFade className={classes.destination}>
       <picture>
-        <source srcSet={tabletBG} media="(min-width: 660px)" />
-        <source srcSet={desktopBG} media="(min-width: 1100px)" />
+        <source srcSet={desktopBG} media="(min-width: 768px)" />
+        <source srcSet={tabletBG} media="(min-width: 400px)" />
 
         <img
           src={mobileBG}
@@ -28,24 +33,14 @@ const Destination = function () {
         </span>
       </div>
 
-      <div className={classes.destination__content}>
-        <div className={classes["destination__img-container"]}>
-          {RenderData("Image")}
-        </div>
-
-        <div className={classes["destination__sub-content"]}>
-          <nav>
-            <DestinationList classes={classes} />
-          </nav>
-
-          {RenderData("Description")}
-
-          <div className={classes.destination__information}>
-            {RenderData("Information")}
-          </div>
-        </div>
-      </div>
-    </div>
+      <RenderDest classes={classes} planet={currPlanet}>
+        <DestinationList
+          classes={classes}
+          currPlanet={currPlanet}
+          setPlanet={setPlanet}
+        />
+      </RenderDest>
+    </RouteFade>
   );
 };
 

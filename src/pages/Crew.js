@@ -8,6 +8,8 @@ import CrewImages from "./crew/CrewContent/CrewImages";
 import CrewBullets from "./crew/CrewContent/CrewBullets";
 import CrewDescription from "./crew/CrewContent/CrewDescription";
 
+import { RouteFade } from "../components/animation/Transitions";
+
 const Crew = function () {
   const [count, setCount] = useState(0);
 
@@ -22,7 +24,7 @@ const Crew = function () {
   };
 
   return (
-    <div className={classes.crew}>
+    <RouteFade className={classes.crew}>
       {/* <img
         src={background}
         alt="Earth Surface"
@@ -54,7 +56,7 @@ const Crew = function () {
           </div>
         </div>
       </div>
-    </div>
+    </RouteFade>
   );
 };
 

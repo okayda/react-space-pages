@@ -3,9 +3,11 @@ import classes from "./styles/Technology.module.scss";
 import TechList from "./technology/TechList";
 import RenderData from "./technology/RenderData";
 
+import { RouteFade } from "../components/animation/Transitions";
+
 const Technology = function () {
   return (
-    <div className={classes.technology}>
+    <RouteFade className={classes.technology}>
       <div className={classes.technology__sub}>
         <span className={classes["technology__sub--num"]}>03</span>
         <span className={classes["technology__sub--title"]}>
@@ -24,7 +26,7 @@ const Technology = function () {
           {RenderData("Description")}
         </div>
       </div>
-    </div>
+    </RouteFade>
   );
 };
 

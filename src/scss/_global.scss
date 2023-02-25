@@ -20,11 +20,12 @@
 html {
   font-size: 62.5%;
   overflow-x: hidden;
+  height: 100%;
 }
 
 body {
   overflow-x: hidden;
-
+  height: 100%;
   box-sizing: border-box;
   background-color: $dark;
   font-size: 1.6rem;
@@ -72,12 +73,6 @@ a:link,
 a:visited {
   text-decoration: none;
   transition: 0.2s;
-}
-
-.container {
-  // max-width: 1920px;
-  // margin: 0 auto;
-  height: 100%;
 }
 
 #main-header {

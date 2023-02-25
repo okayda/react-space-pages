@@ -1,27 +1,26 @@
-import { Routes, Route } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-import Layout from "./components/layout/Layout";
-import "./scss/_global.scss";
-
+import RootLayout from "./pages/RootLayout";
 import Home from "./pages/Home";
 import Destination from "./pages/Destination";
 import Crew from "./pages/Crew";
 import Technology from "./pages/Technology";
 
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <RootLayout />,
+    children: [
+      { index: true, element: <Home /> },
+      { path: "destination", element: <Destination /> },
+      { path: "crew", element: <Crew /> },
+      { path: "technology/:techId", element: <Technology /> },
+    ],
+  },
+]);
+
 function App() {
-  return (
-    <section>
-      <Layout>
-        <Routes>
-          <Route path="/" element={<Home />} exact />
-          <Route path="/home" element={<Home />} />
-          <Route path="/destination/:destId" element={<Destination />} />
-          <Route path="/crew" element={<Crew />} />
-          <Route path="/technology/:techId" element={<Technology />} />
-        </Routes>
-      </Layout>
-    </section>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;

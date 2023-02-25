@@ -17,6 +17,8 @@
 
   &__background {
     position: absolute;
+    width: 100%;
+    height: 100%;
     top: 0;
     left: 0;
     z-index: -10;
@@ -140,19 +142,20 @@
     gap: 2.7rem;
     margin-bottom: 2rem;
 
-    a:link,
-    a:visited {
+    button {
       font-size: 1.4rem;
       font-family: "Barlow Condensed", sans-serif;
       text-transform: uppercase;
+      line-height: 1;
       padding-bottom: 0.8rem;
       letter-spacing: 2.3px;
       color: $light-purple;
+      border-bottom: 3px solid transparent;
+      transition: all 0.3s;
     }
 
-    a.active,
-    a:hover,
-    a:active {
+    .active,
+    button:hover {
       color: $white;
       border-bottom: 3px solid $white;
     }
@@ -160,8 +163,7 @@
     @include tablet() {
       margin-bottom: 3.2rem;
 
-      a:link,
-      a:visited {
+      button {
         font-size: 1.6rem;
       }
     }

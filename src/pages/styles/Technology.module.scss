@@ -95,29 +95,27 @@
     gap: 1.6rem;
     margin-bottom: 2.6rem;
 
-    a:link,
-    a:visited {
+    button {
+      font-size: 1.7rem;
       display: inline-block;
       color: $white;
       border: 1px solid darken($white, 60%);
       border-radius: 100px;
-      padding: 1.1rem 1.6rem;
+      padding: 1.3rem 1.6rem;
     }
 
-    a.active,
-    a:hover,
-    a:active {
+    .active {
       color: #333;
       background-color: $white;
+      font-weight: bold;
     }
 
     @include tablet() {
       margin-bottom: 4.4rem;
 
-      a:link,
-      a:visited {
+      button {
         font-size: 2.4rem;
-        padding: 1.56rem 2.32rem;
+        padding: 1.6rem 2rem;
       }
     }
 
@@ -127,10 +125,9 @@
       align-items: center;
       margin-bottom: 0;
 
-      a:link,
-      a:visited {
-        font-size: 3.2rem;
-        padding: 2.04rem 3.12rem;
+      button {
+        font-size: 2.4rem;
+        padding: 2rem 2.6rem;
       }
     }
   }

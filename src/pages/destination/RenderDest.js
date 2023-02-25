@@ -9,8 +9,8 @@ const contentImage = DestinationImage;
 const contentDescription = DestinationDescription;
 const contentInformation = DestinationInformation;
 
-const RenderDest = function ({ children, planet, classes }) {
-  const targetData = DestData.map((el) => el.id).indexOf(planet);
+const RenderDest = function ({ children, currPlanet, classes }) {
+  const targetData = DestData.map((el) => el.id).indexOf(currPlanet);
 
   const image = contentImage[targetData];
   const description = contentDescription[targetData];

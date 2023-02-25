@@ -1,5 +1,6 @@
 import { DestData } from "../DestData";
 import { DiagonalList } from "../../../components/animation/Transitions";
+import { NavLink } from "react-router-dom";
 
 const DestinationList = function ({ classes, currPlanet, setPlanet }) {
   const btnHandler = function (str) {
@@ -11,7 +12,7 @@ const DestinationList = function ({ classes, currPlanet, setPlanet }) {
   return (
     <ul className={classes["destination__link-list"]}>
       {DestData.map((data, i) => (
-        <DiagonalList delay={i} key={i}>
+        <DiagonalList delay={i} key={data.i}>
           <button
             className={data.id === currPlanet ? classes["active"] : ""}
             onClick={btnHandler.bind(null, data.id)}

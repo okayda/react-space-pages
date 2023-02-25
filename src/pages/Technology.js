@@ -1,11 +1,14 @@
+import { useState } from "react";
+
 import classes from "./styles/Technology.module.scss";
 
-import TechList from "./technology/TechList";
-import RenderData from "./technology/RenderData";
-
+import TechList from "./technology/Contents/TechList";
+import RenderTech from "./technology/RenderTech";
 import { RouteFade } from "../components/animation/Transitions";
 
 const Technology = function () {
+  const [currTech, setTech] = useState("t1");
+
   return (
     <RouteFade className={classes.technology}>
       <div className={classes.technology__sub}>
@@ -15,17 +18,9 @@ const Technology = function () {
         </span>
       </div>
 
-      <div className={classes.technology__content}>
-        <div className={classes.technology__images}>{RenderData("Image")}</div>
-
-        <ul className={classes.technology__list}>
-          <TechList active={classes.active} />
-        </ul>
-
-        <div className={classes.technology__information}>
-          {RenderData("Description")}
-        </div>
-      </div>
+      <RenderTech classes={classes} currTech={currTech}>
+        <TechList classes={classes} currTech={currTech} setTech={setTech} />
+      </RenderTech>
     </RouteFade>
   );
 };

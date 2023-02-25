@@ -33,7 +33,7 @@ const Destination = function () {
         </span>
       </div>
 
-      <RenderDest classes={classes} planet={currPlanet}>
+      <RenderDest classes={classes} currPlanet={currPlanet}>
         <DestinationList
           classes={classes}
           currPlanet={currPlanet}

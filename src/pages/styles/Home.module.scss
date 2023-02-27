@@ -4,15 +4,85 @@
   max-width: 37.5rem;
   padding: 0 2.4rem;
   margin: 6.4rem auto 0;
-
   text-align: center;
+
+  @include tablet() {
+    max-width: 45rem;
+    padding: 0;
+    margin: 0 auto 0;
+  }
+
+  @include desktop() {
+    text-align: left;
+    padding: 0 5.5rem;
+    max-width: 145.5rem;
+
+    &__content-container {
+      padding-top: 6rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      justify-items: center;
+    }
+  }
+
+  @include large() {
+    padding-top: 10rem;
+    max-width: 165rem;
+
+    &__content-container {
+      padding-top: 0;
+    }
+  }
+
+  @include extra-large() {
+    max-width: 186rem;
+  }
+  //  Parent responsive styles end here
 
   &__background {
     position: absolute;
     top: 0;
     left: 0;
     z-index: -10;
-    object-fit: fill;
+
+    @include desktop() {
+      display: none;
+    }
+  }
+
+  .home__overlay-video {
+    @include desktop() {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background-color: rgba(#000000, 0.6);
+      z-index: -5;
+    }
+  }
+
+  &__video {
+    display: none;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -10;
+
+    @media (min-aspect-ratio: 16/9) {
+      width: 100%;
+      height: auto;
+    }
+
+    @media (max-aspect-ratio: 16/9) {
+      width: auto;
+      height: 100%;
+    }
+
+    @include desktop() {
+      display: block;
+    }
   }
 
   &__content {
@@ -59,67 +129,71 @@
   }
 
   &__explore {
+    margin: 0 auto;
+    text-transform: uppercase;
     position: relative;
-    z-index: -5;
-    display: inline-block;
-    background-color: $white;
+    background-color: #fff;
     width: 15rem;
     height: 15rem;
+    display: grid;
+    place-items: center;
     border-radius: 100%;
 
-    &::before {
-      content: "explore";
+    &:link,
+    &:visited {
       text-transform: uppercase;
       font-size: 2rem;
       letter-spacing: 1.2px;
       color: $dark;
+    }
 
+    &:before {
+      content: "";
       position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      z-index: -1;
+      height: 100%;
+      width: 100%;
+      border-radius: 100%;
+      background-color: rgba(#fff, 0.7);
+      animation: pulse 1.4s ease-out infinite;
+    }
+
+    @keyframes pulse {
+      100% {
+        transform: scale(1.5);
+        opacity: 0;
+      }
     }
 
     @include tablet() {
       width: 24rem;
       height: 24rem;
 
-      &::before {
+      &:link,
+      &:visited {
         font-size: 3.2rem;
+      }
+
+      &:before {
+        animation: pulse 1.8s ease-out infinite;
       }
     }
 
     @include desktop {
       width: 27rem;
       height: 27rem;
+
+      &:before {
+        background-color: rgba(#fff, 0.5);
+        animation: pulse 1.5s ease-out infinite;
+      }
+
+      @keyframes pulse {
+        100% {
+          transform: scale(2);
+          opacity: 0;
+        }
+      }
     }
-  }
-
-  @include tablet() {
-    max-width: 45rem;
-    padding: 0;
-    margin: 0 auto 0;
-  }
-
-  @include desktop() {
-    text-align: left;
-    padding: 0 5.5rem;
-    max-width: 145.5rem;
-
-    &__content-container {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      align-items: center;
-      justify-items: center;
-    }
-  }
-
-  @include large() {
-    padding-top: 10rem;
-    max-width: 165rem;
-  }
-
-  @include extra-large() {
-    max-width: 186rem;
   }
 }

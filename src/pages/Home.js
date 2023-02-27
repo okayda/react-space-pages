@@ -6,14 +6,23 @@ import mobileBG from "../assets/home/background-home-mobile.jpg";
 
 import { RouteFade } from "../components/animation/Transitions";
 
+import earthVideo from "../assets/video/space1.mp4";
+
 const Home = function () {
   return (
     <RouteFade className={classes.home}>
       <picture>
-        <source srcSet={desktopBG} media="(min-width: 1100px)" />
+        {/* <source srcSet={desktopBG} media="(min-width: 1100px)" /> */}
         <source srcSet={tabletBG} media="(min-width: 660px)" />
         <img src={mobileBG} className={classes.home__background} alt="Earth" />
       </picture>
+
+      <div className={classes["home__overlay-video"]}></div>
+
+      <video autoPlay loop muted playsInline className={classes.home__video}>
+        <source src={earthVideo} type="video/mp4" />
+      </video>
+
       <div className={classes["home__content-container"]}>
         <div className={classes.home__content}>
           <span>so, you want to travel to</span>
@@ -25,7 +34,9 @@ const Home = function () {
             world experience!
           </p>
         </div>
-        <a href="#" className={classes.home__explore}></a>
+        <a href="#" className={classes.home__explore}>
+          explore
+        </a>
       </div>
     </RouteFade>
   );

@@ -5,6 +5,20 @@
   max-width: 375px;
   margin: 0 auto;
 
+  //Overlay
+  &::before {
+    @include desktop() {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background-color: rgba(#000000, 0.5);
+      z-index: -5;
+    }
+  }
+
   @include tablet() {
     padding: 0;
     max-width: 570px;
@@ -15,6 +29,28 @@
     padding: 0 8rem 0;
   }
 
+  &__video {
+    display: none;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -10;
+
+    @media (min-aspect-ratio: 16/9) {
+      width: 100%;
+      height: auto;
+    }
+
+    @media (max-aspect-ratio: 16/9) {
+      width: auto;
+      height: 100%;
+    }
+
+    @include desktop() {
+      display: block;
+    }
+  }
+
   &__background {
     position: absolute;
     width: 100%;
@@ -22,6 +58,10 @@
     top: 0;
     left: 0;
     z-index: -10;
+
+    @include desktop() {
+      display: none;
+    }
   }
 
   &__sub {

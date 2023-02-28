@@ -12,12 +12,9 @@ const Home = function () {
   return (
     <RouteFade className={classes.home}>
       <picture>
-        {/* <source srcSet={desktopBG} media="(min-width: 1100px)" /> */}
         <source srcSet={tabletBG} media="(min-width: 660px)" />
         <img src={mobileBG} className={classes.home__background} alt="Earth" />
       </picture>
-
-      <div className={classes["home__overlay-video"]}></div>
 
       <video autoPlay loop muted playsInline className={classes.home__video}>
         <source src={earthVideo} type="video/mp4" />

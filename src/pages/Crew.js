@@ -4,6 +4,8 @@ import classes from "./styles/Crew.module.scss";
 
 import background from "../assets/crew/background-crew-mobile.jpg";
 
+import darkEarthVideo from "../assets/video/space3.mp4";
+
 import CrewImages from "./crew/CrewContent/CrewImages";
 import CrewBullets from "./crew/CrewContent/CrewBullets";
 import CrewDescription from "./crew/CrewContent/CrewDescription";
@@ -30,6 +32,10 @@ const Crew = function () {
         alt="Earth Surface"
         className={classes.crew__background}
       /> */}
+
+      <video autoPlay loop muted playsInline className={classes.crew__video}>
+        <source src={darkEarthVideo} type="video/mp4" />
+      </video>
 
       <div className={classes.crew__sub}>
         <span className={classes["crew__sub--num"]}>02</span>

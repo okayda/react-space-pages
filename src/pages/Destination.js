@@ -1,12 +1,11 @@
 import { useState } from "react";
-
 import classes from "./styles/Destination.module.scss";
 
-import smallBG from "../assets/destination/background-destination-mobile.jpg";
-import mediumBG from "../assets/destination/background-destination-tablet.jpg";
-import largeBG from "../assets/destination/background-destination-desktop.jpg";
-
 import planetsVideo from "../assets/video/space2.mp4";
+import Video from "../components/Video";
+import large from "../assets/destination/background-destination-desktop.jpg";
+import medium from "../assets/destination/background-destination-tablet.jpg";
+import small from "../assets/destination/background-destination-mobile.jpg";
 
 import RenderDest from "./destination/RenderDest";
 import DestinationList from "./destination/Contents/DestinationList";
@@ -17,26 +16,18 @@ const Destination = function () {
 
   return (
     <RouteFade className={classes.destination}>
+      <Video classes={classes.destination__video} video={planetsVideo} />
+
       <picture>
-        <source srcSet={largeBG} media="(min-width: 768px)" />
-        <source srcSet={mediumBG} media="(min-width: 400px)" />
+        <source srcSet={large} media="(min-width: 768px)" />
+        <source srcSet={medium} media="(min-width: 400px)" />
 
         <img
-          src={smallBG}
+          src={small}
           alt="Space"
           className={classes.destination__background}
         />
       </picture>
-
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className={classes.destination__video}
-      >
-        <source src={planetsVideo} type="video/mp4" />
-      </video>
 
       <div className={classes.destination__sub}>
         <span className={classes["destination__sub--num"]}>01</span>

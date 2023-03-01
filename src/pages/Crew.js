@@ -1,20 +1,18 @@
 import { useState } from "react";
-
 import classes from "./styles/Crew.module.scss";
 
-import background from "../assets/crew/background-crew-mobile.jpg";
-
-import darkEarthVideo from "../assets/video/space3.mp4";
+import cosmosVideo from "../assets/video/space3.mp4";
+import Video from "../components/Video";
+import medium from "../assets/crew/background-crew-tablet.jpg";
+import small from "../assets/crew/background-crew-mobile.jpg";
 
 import CrewImages from "./crew/CrewContent/CrewImages";
 import CrewBullets from "./crew/CrewContent/CrewBullets";
 import CrewDescription from "./crew/CrewContent/CrewDescription";
-
 import { RouteFade } from "../components/animation/Transitions";
 
 const Crew = function () {
   const [count, setCount] = useState(0);
-
   const [content, setContent] = useState(0);
 
   const change = function (index) {
@@ -27,15 +25,13 @@ const Crew = function () {
 
   return (
     <RouteFade className={classes.crew}>
-      {/* <img
-        src={background}
-        alt="Earth Surface"
-        className={classes.crew__background}
-      /> */}
+      <Video classes={classes.crew__video} video={cosmosVideo} />
 
-      <video autoPlay loop muted playsInline className={classes.crew__video}>
-        <source src={darkEarthVideo} type="video/mp4" />
-      </video>
+      <picture>
+        <source srcSet={medium} media="(min-width: 400px)" />
+
+        <img src={small} alt="Space" className={classes.crew__background} />
+      </picture>
 
       <div className={classes.crew__sub}>
         <span className={classes["crew__sub--num"]}>02</span>

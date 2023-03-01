@@ -1,24 +1,21 @@
 import classes from "./styles/Home.module.scss";
 
-import desktopBG from "../assets/home/background-home-desktop.jpg";
-import tabletBG from "../assets/home/background-home-tablet.jpg";
-import mobileBG from "../assets/home/background-home-mobile.jpg";
+import earthVideo from "../assets/video/space1.mp4";
+import Video from "../components/Video";
+import medium from "../assets/home/background-home-tablet.jpg";
+import small from "../assets/home/background-home-mobile.jpg";
 
 import { RouteFade } from "../components/animation/Transitions";
-
-import earthVideo from "../assets/video/space1.mp4";
 
 const Home = function () {
   return (
     <RouteFade className={classes.home}>
-      <picture>
-        <source srcSet={tabletBG} media="(min-width: 660px)" />
-        <img src={mobileBG} className={classes.home__background} alt="Earth" />
-      </picture>
+      <Video classes={classes.home__video} video={earthVideo} />
 
-      <video autoPlay loop muted playsInline className={classes.home__video}>
-        <source src={earthVideo} type="video/mp4" />
-      </video>
+      <picture>
+        <source srcSet={medium} media="(min-width: 660px)" />
+        <img src={small} className={classes.home__background} alt="Earth" />
+      </picture>
 
       <div className={classes["home__content-container"]}>
         <div className={classes.home__content}>

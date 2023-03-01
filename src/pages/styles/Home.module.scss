@@ -55,21 +55,7 @@
   //  Parent responsive styles end here
 
   &__video {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: -10;
-
-    @media (min-aspect-ratio: 16/9) {
-      width: 100%;
-      height: auto;
-    }
-
-    @media (max-aspect-ratio: 16/9) {
-      width: auto;
-      height: 100%;
-    }
+    @include video();
 
     @include desktop() {
       display: block;
@@ -77,10 +63,7 @@
   }
 
   &__background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -10;
+    @include background();
 
     @include desktop() {
       display: none;

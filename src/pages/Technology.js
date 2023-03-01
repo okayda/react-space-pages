@@ -1,12 +1,10 @@
 import { useState } from "react";
-
 import classes from "./styles/Technology.module.scss";
 
-import smallBG from "../assets/technology/background-technology-mobile.jpg";
-import mediumBG from "../assets/technology/background-technology-tablet.jpg";
-import largeBG from "../assets/technology/background-technology-desktop.jpg";
-
 import nightVideo from "../assets/video/space4.mp4";
+import Video from "../components/Video";
+import medium from "../assets/technology/background-technology-tablet.jpg";
+import small from "../assets/technology/background-technology-mobile.jpg";
 
 import TechList from "./technology/Contents/TechList";
 import RenderTech from "./technology/RenderTech";
@@ -17,22 +15,13 @@ const Technology = function () {
 
   return (
     <RouteFade className={classes.technology}>
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className={classes.technology__video}
-      >
-        <source src={nightVideo} type="video/mp4" />
-      </video>
+      <Video classes={classes.technology__video} video={nightVideo} />
 
       <picture>
-        <source srcSet={largeBG} media="(min-width: 768px)" />
-        <source srcSet={mediumBG} media="(min-width: 400px)" />
+        <source srcSet={medium} media="(min-width: 650px)" />
 
         <img
-          src={smallBG}
+          src={small}
           alt="Space"
           className={classes.technology__background}
         />

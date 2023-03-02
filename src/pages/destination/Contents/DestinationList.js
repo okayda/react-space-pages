@@ -12,7 +12,7 @@ const DestinationList = function ({ classes, currPlanet, setPlanet }) {
   return (
     <ul className={classes["destination__link-list"]}>
       {DestData.map((data, i) => (
-        <DiagonalList delay={i} key={data.i}>
+        <DiagonalList delay={i} key={data.id}>
           <button
             className={data.id === currPlanet ? classes["active"] : ""}
             onClick={btnHandler.bind(null, data.id)}

@@ -1,29 +1,19 @@
 @use "../../scss" as *;
 
 .home {
-  max-width: 37.5rem;
-  padding: 0 2.4rem;
-  margin: 6.4rem auto 0;
+  @include mobileWidth();
   text-align: center;
 
-  //Overlay
   &::before {
     @include desktop() {
-      content: "";
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100vh;
-      background-color: rgba(#000, 0.6);
-      z-index: -5;
+      @include overlay(0.6);
     }
   }
 
   @include tablet() {
     max-width: 45rem;
     padding: 0;
-    margin: 0 auto 0;
+    margin: 6.4rem auto;
   }
 
   @include desktop() {
@@ -41,18 +31,14 @@
   }
 
   @include large() {
-    padding-top: 10rem;
+    padding-top: 1rem;
     max-width: 165rem;
 
     &__content-container {
       padding-top: 0;
     }
   }
-
-  @include extra-large() {
-    max-width: 186rem;
-  }
-  //  Parent responsive styles end here
+  //  ===========END===============
 
   &__video {
     @include video();
@@ -175,7 +161,7 @@
 
       @keyframes pulse {
         100% {
-          transform: scale(2);
+          transform: scale(1.7);
           opacity: 0;
         }
       }

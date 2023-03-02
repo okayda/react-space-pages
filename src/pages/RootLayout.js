@@ -1,7 +1,7 @@
 import ReactDOM from "react-dom";
 import { Outlet, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
-import HeaderNavBar from "../components/layout/HeaderNavBar/HeaderNavBar";
+import HeaderNavBar from "../components/HeaderNavBar/HeaderNavBar";
 
 import "../scss/_global.scss";
 

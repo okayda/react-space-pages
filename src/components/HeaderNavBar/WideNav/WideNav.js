@@ -1,11 +1,9 @@
 import { NavLink } from "react-router-dom";
-
 import classes from "./WideNav.module.scss";
-
 import { linksData } from "../HeaderData";
 
 // T = Transition
-import * as T from "../../../animation/HeaderNavAnimate/HeaderNavTransition";
+import * as T from "../../animation/HeaderNavAnimate/HeaderNavTransition";
 
 const links = linksData.map(({ name, to, id }) => (
   <T.NavListStagger key={id} isMobile={false}>

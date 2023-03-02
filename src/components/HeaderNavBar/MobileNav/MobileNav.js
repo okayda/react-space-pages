@@ -1,18 +1,21 @@
+import { NavLink } from "react-router-dom";
 import { AnimatePresence, useCycle } from "framer-motion";
 import classes from "./MobileNav.module.scss";
 
 import { linksData } from "../HeaderData";
 
-import burgerIcon from "../../../../assets/shared/icon-hamburger.svg";
-import closeIcon from "../../../../assets/shared/icon-close.svg";
+import burgerIcon from "../../../assets/shared/icon-hamburger.svg";
+import closeIcon from "../../../assets/shared/icon-close.svg";
 
 // T = Transition
-import * as T from "../../../animation/HeaderNavAnimate/HeaderNavTransition";
+import * as T from "../../animation/HeaderNavAnimate/HeaderNavTransition";
 
 const links = linksData.map(({ name, to, id }) => (
-  <T.NavListStagger key={id} href={to} isMobile={true}>
-    <span>0{id}</span>
-    {name}
+  <T.NavListStagger key={id} isMobile={true}>
+    <NavLink to={to}>
+      <span>0{id}</span>
+      {name}
+    </NavLink>
   </T.NavListStagger>
 ));
 

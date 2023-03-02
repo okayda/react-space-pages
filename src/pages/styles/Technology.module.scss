@@ -1,21 +1,11 @@
 @use "../../scss" as *;
 
 .technology {
-  padding: 0 2.4rem;
-  max-width: 375px;
-  margin: 0 auto;
+  @include mobileWidth();
 
-  //Overlay
   &::before {
     @include desktop() {
-      content: "";
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100vh;
-      background-color: rgba(#000, 0.85);
-      z-index: -5;
+      @include overlay(0.85);
     }
   }
 
@@ -25,9 +15,10 @@
   }
 
   @include desktop() {
-    max-width: 1500px;
-    padding: 0 6.4rem 2.4rem;
+    max-width: 150rem;
+    padding: 0 6rem 6rem;
   }
+  //  ===========END===============
 
   &__video {
     @include video();
@@ -96,13 +87,13 @@
 
     img {
       width: 100%;
-      height: 170px;
+      height: 17rem;
     }
 
     @include tablet() {
       img {
         width: 100%;
-        height: 310px;
+        height: 31rem;
       }
     }
 
@@ -112,8 +103,8 @@
       margin-bottom: 0;
 
       img {
-        width: 520px;
-        height: 530px;
+        width: 52rem;
+        height: 53rem;
       }
     }
   }
@@ -180,7 +171,7 @@
     }
 
     p {
-      max-width: 360px;
+      max-width: 36rem;
       margin: 0 auto;
     }
 
@@ -195,7 +186,7 @@
       }
 
       p {
-        max-width: 440px;
+        max-width: 44rem;
       }
     }
 
@@ -214,7 +205,7 @@
       p {
         margin: 0;
         font-size: 1.8rem;
-        max-width: 540px;
+        max-width: 54rem;
       }
     }
   }

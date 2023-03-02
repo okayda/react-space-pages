@@ -29,10 +29,9 @@ export const NavMainListStagger = function ({ children, isMobile }) {
   );
 };
 
-export const NavListStagger = function ({ children, href, isMobile }) {
+export const NavListStagger = function ({ children, isMobile }) {
   return (
     <motion.li
-      href={href}
       whileHover={{ scale: 1.08 }}
       variants={isMobile ? M.MobileLinkStagger : W.WideLinkStagger}
     >

@@ -20,12 +20,11 @@
 html {
   font-size: 62.5%;
   overflow-x: hidden;
-  height: 100%;
 }
 
 body {
-  overflow-x: hidden;
-  height: 100%;
+  padding: 0 !important;
+  height: 100vh;
   box-sizing: border-box;
   background-color: $dark;
   font-size: 1.6rem;
@@ -75,15 +74,17 @@ a:visited {
 }
 
 #main-header {
-  padding: 2.4rem 0;
-}
+  @include tablet() {
+    padding-left: 4rem;
+    display: flex;
+    justify-content: flex-end;
 
-@include tablet() {
-  #main-header {
-    padding: 0;
+    p {
+      font-size: 1.6rem;
+    }
   }
 
-  p {
-    font-size: 1.6rem;
+  @include desktop {
+    padding-left: 5.5rem;
   }
 }

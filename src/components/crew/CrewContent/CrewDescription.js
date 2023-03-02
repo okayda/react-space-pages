@@ -14,7 +14,7 @@ const content = CrewInfo.map((el) => {
 
 const CrewDescription = function ({ contentNum }) {
   return (
-    <AnimatePresence mode="wait" initial={true}>
+    <AnimatePresence mode="wait" initial={false}>
       {content[contentNum]}
     </AnimatePresence>
   );

@@ -16,7 +16,7 @@ const RenderTech = function ({ children, currTech, classes }) {
   return (
     <div className={classes.technology__content}>
       <div className={classes.technology__images}>
-        <AnimatePresence mode="wait" initial={true}>
+        <AnimatePresence mode="wait" initial={false}>
           {image}
         </AnimatePresence>
       </div>
@@ -24,7 +24,7 @@ const RenderTech = function ({ children, currTech, classes }) {
       <ul className={classes.technology__list}>{children}</ul>
 
       <div className={classes.technology__information}>
-        <AnimatePresence mode="wait" initial={true}>
+        <AnimatePresence mode="wait" initial={false}>
           {description}
         </AnimatePresence>
       </div>

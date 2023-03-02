@@ -8,8 +8,8 @@ export const WideSlide = {
 
     transition: {
       bounce: 0,
-      delay: 0.4,
-      duration: 0.85,
+      delay: 0.5,
+      duration: 1.4,
     },
   },
 };
@@ -17,7 +17,7 @@ export const WideSlide = {
 export const WideListStagger = {
   open: {
     transition: {
-      delayChildren: 1.2,
+      delayChildren: 2,
 
       staggerChildren: 0.4,
       staggerDirection: 1,

@@ -20,13 +20,17 @@
       content: " ";
       width: 44rem;
       height: 1px;
-      background-color: darken(#fff, 60%);
+      background-color: darken($white, 60%);
     }
   }
 
   ul {
     display: flex;
     padding: 0 4rem;
+
+    .active {
+      border-bottom: 3px solid $white;
+    }
 
     a:link,
     a:visited {
@@ -37,7 +41,7 @@
       font-size: 1.45rem;
       letter-spacing: 2.3px;
       text-transform: uppercase;
-      color: #fff;
+      color: $white;
     }
 
     @include tablet() {

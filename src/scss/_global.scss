@@ -51,6 +51,12 @@ span {
   font-family: "Barlow Condensed", sans-serif;
 }
 
+h1:hover {
+  -webkit-text-stroke: 1px $white;
+  color: transparent;
+  transition: all 0.6s;
+}
+
 h1,
 h2,
 h3 {

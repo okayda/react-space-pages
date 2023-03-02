@@ -12,7 +12,7 @@ export const Diagonal = function (index) {
       translateY: 0,
       transition: {
         duration: 0.45,
-        delay: index * 0.3,
+        delay: index * 0.55,
       },
     },
   };
@@ -93,6 +93,20 @@ export const PageFade = {
     opacity: 1,
     transition: {
       duration: 0.9,
+    },
+  },
+};
+
+export const VideoFade = {
+  hidden: {
+    opacity: 0,
+  },
+
+  visible: {
+    opacity: 1,
+    transition: {
+      duration: 1,
+      delay: 0.8,
     },
   },
 };

@@ -19,20 +19,24 @@ const RenderDest = function ({ children, currPlanet, classes }) {
   return (
     <div className={classes.destination__content}>
       <div className={classes["destination__img-container"]}>
-        <AnimatePresence mode="wait" initial={true}>
+        <AnimatePresence mode="wait" initial={false}>
           {image}
         </AnimatePresence>
       </div>
 
       <div className={classes["destination__sub-content"]}>
-        <nav>{children}</nav>
+        <nav>
+          <AnimatePresence mode="wait" initial={true}>
+            {children}
+          </AnimatePresence>
+        </nav>
 
-        <AnimatePresence mode="wait" initial={true}>
+        <AnimatePresence mode="wait" initial={false}>
           {description}
         </AnimatePresence>
 
         <div className={classes.destination__information}>
-          <AnimatePresence mode="wait" initial={true}>
+          <AnimatePresence mode="wait" initial={false}>
             {information}
           </AnimatePresence>
         </div>

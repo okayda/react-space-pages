@@ -32,7 +32,7 @@ export const NavMainListStagger = function ({ children, isMobile }) {
 export const NavListStagger = function ({ children, isMobile }) {
   return (
     <motion.li
-      whileHover={{ scale: 1.08 }}
+      whileHover={{ scale: 1.14, rotate: -4 }}
       variants={isMobile ? M.MobileLinkStagger : W.WideLinkStagger}
     >
       {children}

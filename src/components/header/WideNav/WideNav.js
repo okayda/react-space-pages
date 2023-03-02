@@ -7,7 +7,12 @@ import * as T from "../../animation/HeaderNavAnimate/HeaderNavTransition";
 
 const links = linksData.map(({ name, to, id }) => (
   <T.NavListStagger key={id} isMobile={false}>
-    <NavLink to={to}>{name}</NavLink>
+    <NavLink
+      to={to}
+      className={({ isActive }) => (isActive ? classes.active : "")}
+    >
+      {name}
+    </NavLink>
   </T.NavListStagger>
 ));
 

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import classes from "./styles/Home.module.scss";
 
 import earthVideo from "../assets/video/space1.mp4";
@@ -28,9 +29,9 @@ const Home = function () {
             world experience!
           </p>
         </div>
-        <a href="#" className={classes.home__explore}>
+        <Link to="destination" className={classes.home__explore}>
           explore
-        </a>
+        </Link>
       </div>
     </RouteFade>
   );

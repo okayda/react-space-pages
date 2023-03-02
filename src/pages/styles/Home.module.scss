@@ -103,7 +103,7 @@
     margin: 0 auto;
     text-transform: uppercase;
     position: relative;
-    background-color: #fff;
+    background-color: $white;
     width: 15rem;
     height: 15rem;
     display: grid;
@@ -125,7 +125,7 @@
       height: 100%;
       width: 100%;
       border-radius: 100%;
-      background-color: rgba(#fff, 0.7);
+      background-color: rgba($white, 0.7);
       animation: pulse 1.4s ease-out infinite;
     }
 
@@ -155,7 +155,7 @@
       height: 27rem;
 
       &:before {
-        background-color: rgba(#fff, 0.5);
+        background-color: rgba($white, 0.5);
         animation: pulse 1.5s ease-out infinite;
       }
 

@@ -6,8 +6,8 @@ import Video from "../components/Video";
 import medium from "../assets/technology/background-technology-tablet.jpg";
 import small from "../assets/technology/background-technology-mobile.jpg";
 
-import TechList from "./technology/Contents/TechList";
-import RenderTech from "./technology/RenderTech";
+import TechList from "../components/technology/Contents/TechList";
+import RenderTech from "../components/technology/RenderTech";
 import { RouteFade } from "../components/animation/Transitions";
 
 const Technology = function () {

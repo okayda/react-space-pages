@@ -6,9 +6,9 @@ import Video from "../components/Video";
 import medium from "../assets/crew/background-crew-tablet.jpg";
 import small from "../assets/crew/background-crew-mobile.jpg";
 
-import CrewImages from "./crew/CrewContent/CrewImages";
-import CrewBullets from "./crew/CrewContent/CrewBullets";
-import CrewDescription from "./crew/CrewContent/CrewDescription";
+import CrewImages from "../components/crew/CrewContent/CrewImages";
+import CrewBullets from "../components/crew/CrewContent/CrewBullets";
+import CrewDescription from "../components/crew/CrewContent/CrewDescription";
 import { RouteFade } from "../components/animation/Transitions";
 
 const Crew = function () {

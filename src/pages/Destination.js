@@ -7,8 +7,8 @@ import large from "../assets/destination/background-destination-desktop.jpg";
 import medium from "../assets/destination/background-destination-tablet.jpg";
 import small from "../assets/destination/background-destination-mobile.jpg";
 
-import RenderDest from "./destination/RenderDest";
-import DestinationList from "./destination/Contents/DestinationList";
+import RenderDest from "../components/destination/RenderDest";
+import DestinationList from "../components/destination/Contents/DestinationList";
 import { RouteFade } from "../components/animation/Transitions";
 
 const Destination = function () {

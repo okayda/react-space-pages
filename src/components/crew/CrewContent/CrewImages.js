@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useRef } from "react";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperConfig from "../SwiperConfig";
@@ -17,7 +17,7 @@ const CrewImages = function ({ updateContent, setCount, count }) {
 
     swiperRef.current.swiper.slideTo(+count);
     setCount(null);
-  }, [count]);
+  }, [count, setCount]);
 
   const persons = CrewImgs.map(({ url, alt, id }) => {
     return (

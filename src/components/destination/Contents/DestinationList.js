@@ -1,6 +1,5 @@
 import { DestData } from "../DestData";
 import { DiagonalList } from "../../../components/animation/Transitions";
-import { NavLink } from "react-router-dom";
 
 const DestinationList = function ({ classes, currPlanet, setPlanet }) {
   const btnHandler = function (str) {

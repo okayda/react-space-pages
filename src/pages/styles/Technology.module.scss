@@ -117,6 +117,8 @@
     margin-bottom: 2.6rem;
 
     button {
+      cursor: pointer !important;
+
       font-size: 1.7rem;
       display: inline-block;
       color: $white;

@@ -19,11 +19,11 @@ Users should be able to:
 
 ### Built with
 
-- Semantic HTML5 markup
 - Mobile-first (Layout)
-- SCSS-Modules
 - React-JS
-- React-Router-Dom
+- React-Router-6
+- Framer-Motion
+- SCSS-Modules
 
 ## Author
 

@@ -24,6 +24,7 @@ Users should be able to:
 - React-Router-6
 - Framer-Motion
 - SCSS-Modules
+- BEM-Methodology
 
 ## Author
 

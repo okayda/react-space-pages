@@ -15,7 +15,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Add solution URL here](https://www.frontendmentor.io/challenges/space-tourism-multipage-website-gRWj1URZ3)
-- Live Site URL: [Add live site URL here]()
+- Live Site URL: [Add live site URL here](https://jhon-okayda-spaces-tourism-pages.netlify.app/)
 
 ### Built with
 
@@ -24,6 +24,7 @@ Users should be able to:
 - React-Router-6
 - Framer-Motion
 - SCSS-Modules
+- BEM-Methodology
 
 ## Author
 
